@@ -10,40 +10,40 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto px-5 py-10">
         {/* Header */}
         <header className="mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-  {/* Left: Logo + tagline */}
-  <div className="flex-1 min-w-0">
-    <img
-      src="/logo.svg"
-      alt="Year Unplugged"
-      className="h-8 mb-2"
-    />
-    <div className="text-sm text-gray-600">
-      What happens to your health when you don't use screens for a year?
-    </div>
-  </div>
+          {/* Left: Logo + tagline */}
+          <div className="flex-1 min-w-0">
+            <img
+              src="/logo.svg"
+              alt="Year Unplugged"
+              className="h-8 mb-2"
+            />
+            <div className="text-sm text-gray-600">
+              What happens to your health when you don&apos;t use screens for a year?
+            </div>
+          </div>
 
-  {/* Right: Sponsors */}
-  <div className="text-right w-full sm:w-auto">
-    <div className="text-xs text-gray-600 mb-3 tracking-wider">Sponsored By</div>
-    <div className="flex flex-wrap justify-end gap-x-6 gap-y-3">
-      <img
-        src="/eight-sleep-logo.svg"
-        alt="Eight Sleep"
-        className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
-      />
-      <img
-        src="/function-logo.png"
-        alt="Function"
-        className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
-      />
-      <img
-        src="/huberman-lab.webp"
-        alt="Huberman Lab"
-        className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
-      />
-    </div>
-  </div>
-</header>
+          {/* Right: Sponsors */}
+          <div className="text-right w-full sm:w-auto">
+            <div className="text-xs text-gray-600 mb-3 tracking-wider">Sponsored By</div>
+            <div className="flex flex-wrap justify-end gap-x-6 gap-y-3">
+              <img
+                src="/eight-sleep-logo.svg"
+                alt="Eight Sleep"
+                className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="/function-logo.png"
+                alt="Function"
+                className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="/huberman-lab.webp"
+                alt="Huberman Lab"
+                className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </div>
+        </header>
 
         {/* Compact Progress */}
         <div className="bg-gray-950 rounded-2xl p-6 mb-5 border border-gray-900">
@@ -90,11 +90,11 @@ export default function Dashboard() {
           <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-900">
             <div className="relative aspect-video bg-black">
               {!isVideoPlaying ? (
-                <div 
+                <div
                   className="w-full h-full cursor-pointer relative"
                   onClick={() => setIsVideoPlaying(true)}
                 >
-                  <img 
+                  <img
                     src="https://img.youtube.com/vi/Wl_LIUhei5E/maxresdefault.jpg"
                     alt="Video thumbnail"
                     className="w-full h-full object-cover"
@@ -220,13 +220,13 @@ export default function Dashboard() {
               </div>
               <div className="text-sm text-gray-600 mb-5">Overall score</div>
               <div className="h-16 flex items-end gap-1.5 mt-4">
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '65%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '72%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '68%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '85%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '78%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '82%'}} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{height: '90%'}} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '65%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '72%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '68%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '85%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '78%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '82%' }} />
+                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '90%' }} />
               </div>
             </div>
           </div>
