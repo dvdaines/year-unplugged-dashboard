@@ -10,7 +10,7 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto px-5 py-10">
         {/* Header */}
         <header className="mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          {/* Left: Logo + tagline */}
+          {/* Left: Logo + tag */}
           <div className="flex-1 min-w-0">
             <img
               src="/logo.svg"
