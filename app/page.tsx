@@ -14,7 +14,7 @@ export default function Dashboard() {
   <div className="flex-1 min-w-0">
     <img
       src="/logo.svg"
-      alt="Unplugged 365"
+      alt="Year Unplugged"
       className="h-8 mb-2"
     />
     <div className="text-sm text-gray-600">
