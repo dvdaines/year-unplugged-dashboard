@@ -49,7 +49,7 @@ export default function Dashboard() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="text-xs font-semibold text-emerald-400 tracking-wider mb-1">
-                NOTE: This project is not live. The target start date is January 1, 2026. Consider this dashboard Version 0.1: A tool for communication. Project planning started today—Oct. 4th 2025—though I&apos;ve thought about it for years, and I am a big fan of moving fast—so I shipped it. As of now, the team consists of me and an M.D. advisor. I have also initiated conversations with a content guy.
+                NOTE: This project is not live. The target start date is January 1, 2026. Consider this dashboard Version 0.1: A tool for communication. Project planning started today—Oct. 4th 2025—though I&apos;ve thought about it for years, and I am a big fan of moving fast—so I shipped it. As of now, the team consists of me and an M.D. advisor. I have also initiated conversations with a content guy. Check out the video below for more info.
               </div>
 
             </div>
