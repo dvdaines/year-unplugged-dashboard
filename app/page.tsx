@@ -177,7 +177,7 @@ export default function Dashboard() {
               Now, with 18 hours of screen time per day—and multiple with AI–I find myself asking: <br /> <br />
               <ul>
                 <li className="text-gray-300"><em>What is it doing to my physical health?</em></  li>
-                <li className="text-gray-300">What is it doing to my life satisfaction?</li>
+                <li className="text-gray-300"><em>What is it doing to my life satisfaction?</em></li>
                 <li className="text-gray-300"><em>What is it doing to my sleep?</em></li>
                 <li className="text-gray-300"><em>Etc.</em></li>
               </ul>
