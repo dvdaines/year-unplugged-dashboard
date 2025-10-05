@@ -282,10 +282,10 @@ export default function Dashboard() {
         <div className="text-xl font-semibold text-white mb-5">Previous Episodes</div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {[
-            { title: 'Week 21: Finding Flow', day: 'Day 147 • Sep 27' },
-            { title: 'Week 20: Deep Work', day: 'Day 140 • Sep 20' },
-            { title: 'Week 19: Solitude', day: 'Day 133 • Sep 13' },
-            { title: 'Week 18: Clarity', day: 'Day 126 • Sep 6' }
+            { title: 'Week 21: Testosterone is crazy', day: 'Day 147 • Sep 27' },
+            { title: 'Week 20: I miss my phone so much', day: 'Day 140 • Sep 20' },
+            { title: 'Week 19: I don&apos;t miss my phone at all', day: 'Day 133 • Sep 13' },
+            { title: 'Week 18: Sleeping like a baby', day: 'Day 126 • Sep 6' }
           ].map((video, i) => (
             <div key={i} className="bg-gray-950 rounded-xl overflow-hidden border border-gray-900 hover:border-gray-800 hover:-translate-y-0.5 transition-all cursor-pointer">
               <div className="aspect-video bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
