@@ -24,7 +24,7 @@ export default function Dashboard() {
 
           {/* Right: Sponsors */}
           <div className="text-right w-full sm:w-auto">
-            <div className="text-xs text-gray-600 mb-3 tracking-wider">Sponsored By</div>
+            <div className="text-xs text-gray-600 mb-3 tracking-wider">NOT Sponsored By:</div>
             <div className="flex flex-wrap justify-end gap-x-6 gap-y-3">
               <img
                 src="/eight-sleep-logo.svg"
@@ -45,6 +45,16 @@ export default function Dashboard() {
           </div>
         </header>
 
+        <section className="bg-gray-950 rounded-2xl p-6 mb-6 border border-gray-900">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold text-emerald-400 tracking-wider mb-1">
+                NOTE: This project is not live. The target start date is January 1, 2026. Consider this dashboard Version 0.1: A tool for communication. This project started today-Oct. 4th 2025–though I've thought about it for years, and I am a big fan of moving fast–so I shipped it. As of now, the team consists of me and an M.D. advisor. I have also initiated conversations with a content guy.
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Compact Progress */}
         <div className="bg-gray-950 rounded-2xl p-6 mb-5 border border-gray-900">
           <div className="flex items-center justify-between">
@@ -55,32 +65,32 @@ export default function Dashboard() {
               <div className="text-sm text-gray-600">days device-free</div>
             </div>
             <div className="relative w-[60px] h-[60px]"> {/* 1.5x of w-10/h-10 (40px) */}
-  <svg className="w-[60px] h-[60px] -rotate-90">
-    <circle
-      cx="30"
-      cy="30"
-      r="26.25"
-      fill="none"
-      stroke="#1a1a1a"
-      strokeWidth="4.5"
-    />
-    <circle
-      cx="30"
-      cy="30"
-      r="26.25"
-      fill="none"
-      stroke="#00d4aa"
-      strokeWidth="4.5"
-      strokeLinecap="round"
-      strokeDasharray="164.9"
-      strokeDashoffset="95.6"
-      className="transition-all duration-1000"
-    />
-  </svg>
-  <div className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-emerald-400">
-    42%
-  </div>
-</div>
+              <svg className="w-[60px] h-[60px] -rotate-90">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="26.25"
+                  fill="none"
+                  stroke="#1a1a1a"
+                  strokeWidth="4.5"
+                />
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="26.25"
+                  fill="none"
+                  stroke="#00d4aa"
+                  strokeWidth="4.5"
+                  strokeLinecap="round"
+                  strokeDasharray="164.9"
+                  strokeDashoffset="95.6"
+                  className="transition-all duration-1000"
+                />
+              </svg>
+              <div className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-emerald-400">
+                42%
+              </div>
+            </div>
 
 
           </div>
