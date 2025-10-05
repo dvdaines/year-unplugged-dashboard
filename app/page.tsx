@@ -49,42 +49,69 @@ export default function Dashboard() {
         <div className="bg-gray-950 rounded-2xl p-6 mb-5 border border-gray-900">
           <div className="flex items-center justify-between">
             <div className="flex items-baseline gap-3">
-              <div className="text-5xl font-bold text-white tracking-tight">
-                154<span className="text-2xl text-gray-600">/365</span>
+              <div className="text-3xl font-bold text-white tracking-tight">
+                154<span className="text-xl text-gray-600">/365</span>
               </div>
               <div className="text-sm text-gray-600">days device-free</div>
             </div>
-            <div className="relative w-20 h-20">
-              <svg className="w-20 h-20 -rotate-90">
-                <circle
-                  cx="40"
-                  cy="40"
-                  r="35"
-                  fill="none"
-                  stroke="#1a1a1a"
-                  strokeWidth="6"
-                />
-                <circle
-                  cx="40"
-                  cy="40"
-                  r="35"
-                  fill="none"
-                  stroke="#00d4aa"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeDasharray="220"
-                  strokeDashoffset="127"
-                  className="transition-all duration-1000"
-                />
-              </svg>
-              <div className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-emerald-400">
-                42%
-              </div>
-            </div>
+            <div className="relative w-[60px] h-[60px]"> {/* 1.5x of w-10/h-10 (40px) */}
+  <svg className="w-[60px] h-[60px] -rotate-90">
+    <circle
+      cx="30"
+      cy="30"
+      r="26.25"
+      fill="none"
+      stroke="#1a1a1a"
+      strokeWidth="4.5"
+    />
+    <circle
+      cx="30"
+      cy="30"
+      r="26.25"
+      fill="none"
+      stroke="#00d4aa"
+      strokeWidth="4.5"
+      strokeLinecap="round"
+      strokeDasharray="164.9"
+      strokeDashoffset="95.6"
+      className="transition-all duration-1000"
+    />
+  </svg>
+  <div className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-emerald-400">
+    42%
+  </div>
+</div>
+
+
           </div>
         </div>
 
-        {/* Featured Video + Metrics Side by Side */}
+        {/* Send me a letter (moved up from footer) */}
+        <section className="bg-gray-950 rounded-2xl p-6 mb-6 border border-gray-900">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-1">
+                Send me a letter
+              </div>
+              <div className="text-sm text-gray-500">
+                Send letters etc. to:
+              </div>
+              <div className="text-white font-medium">
+                P.O. Box 1754, Salt Lake City, UT 84110
+              </div>
+            </div>
+            <a
+              href="https://www.youtube.com/shorts/_dA5i-ki-Yo"
+              className="inline-flex items-center justify-center rounded-xl border border-emerald-500/40 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500/10 transition-colors"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              How letters work
+            </a>
+          </div>
+        </section>
+
+        {/* Featured Video + Message Side by Side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-8">
           {/* Featured Video */}
           <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-900">
@@ -113,7 +140,7 @@ export default function Dashboard() {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                />
               )}
             </div>
             <div className="p-6">
@@ -129,105 +156,124 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Metrics Grid - 2x2 on the right */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Sleep Card */}
-            <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
-              <div className="flex items-center mb-5">
-                <div className="text-3xl mr-3">😴</div>
-                <div className="text-base font-semibold text-white">Sleep</div>
+          {/* Message (replaces right-side metrics) */}
+          <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900">
+            <h2 className="text-white text-2xl sm:text-3xl font-bold mb-3">
+              I&apos;m going one year without devices.
+            </h2>
+            <div className="text-sm sm:text-base text-gray-400 leading-relaxed">
+              When I was 20, I moved to Silicon Valley because I was obsessed with tech and wanted to work in the industry.
+              Now, with 18 hours of screen time per day—and many with AI–I find myself asking: <br /> <br />
+              <ul>
+                <li className="text-gray-300"><em>What is it doing to my physical health?</em></  li>
+                <li className="text-gray-300">What is it doing to my life satisfaction?</li>
+                <li className="text-gray-300"><em>What is it doing to my sleep?</em></li>
+                <li className="text-gray-300"><em>Etc.</em></li>
+              </ul>
+              <br className="hidden sm:block" /> <br />
+              And what if I went without screens for a year?
+            </div>
+          </div>
+        </div>
+
+        {/* Metrics Row (moved beneath video & message) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+          {/* Sleep Card */}
+          <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
+            <div className="flex items-center mb-5">
+              <div className="text-3xl mr-3">😴</div>
+              <div className="text-base font-semibold text-white">Sleep</div>
+            </div>
+            <div className="text-4xl font-bold text-white tracking-tight mb-1">
+              8.2<span className="text-base text-gray-600 font-normal"> hrs</span>
+            </div>
+            <div className="text-sm text-gray-600 mb-5">Average duration</div>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Quality Score</span>
+                <span className="text-sm font-semibold text-emerald-400">87/100</span>
               </div>
-              <div className="text-4xl font-bold text-white tracking-tight mb-1">
-                8.2<span className="text-base text-gray-600 font-normal"> hrs</span>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">REM Sleep</span>
+                <span className="text-sm font-semibold text-white">24%</span>
               </div>
-              <div className="text-sm text-gray-600 mb-5">Average duration</div>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Quality Score</span>
-                  <span className="text-sm font-semibold text-emerald-400">87/100</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">REM Sleep</span>
-                  <span className="text-sm font-semibold text-white">24%</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Deep Sleep</span>
-                  <span className="text-sm font-semibold text-emerald-400">22%</span>
-                </div>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Deep Sleep</span>
+                <span className="text-sm font-semibold text-emerald-400">22%</span>
               </div>
             </div>
+          </div>
 
-            {/* Heart Card */}
-            <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
-              <div className="flex items-center mb-5">
-                <div className="text-3xl mr-3">❤️</div>
-                <div className="text-base font-semibold text-white">Heart</div>
+          {/* Heart Card */}
+          <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
+            <div className="flex items-center mb-5">
+              <div className="text-3xl mr-3">❤️</div>
+              <div className="text-base font-semibold text-white">Heart</div>
+            </div>
+            <div className="text-4xl font-bold text-white tracking-tight mb-1">
+              58<span className="text-base text-gray-600 font-normal"> bpm</span>
+            </div>
+            <div className="text-sm text-gray-600 mb-5">Resting heart rate</div>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">HRV (7-day)</span>
+                <span className="text-sm font-semibold text-emerald-400">72 ms</span>
               </div>
-              <div className="text-4xl font-bold text-white tracking-tight mb-1">
-                58<span className="text-base text-gray-600 font-normal"> bpm</span>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Blood Pressure</span>
+                <span className="text-sm font-semibold text-emerald-400">118/76</span>
               </div>
-              <div className="text-sm text-gray-600 mb-5">Resting heart rate</div>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">HRV (7-day)</span>
-                  <span className="text-sm font-semibold text-emerald-400">72 ms</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Blood Pressure</span>
-                  <span className="text-sm font-semibold text-emerald-400">118/76</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">VO2 Max</span>
-                  <span className="text-sm font-semibold text-white">48</span>
-                </div>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">VO2 Max</span>
+                <span className="text-sm font-semibold text-white">48</span>
               </div>
             </div>
+          </div>
 
-            {/* Biomarkers Card */}
-            <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
-              <div className="flex items-center mb-5">
-                <div className="text-3xl mr-3">🩺</div>
-                <div className="text-base font-semibold text-white">Biomarkers</div>
+          {/* Biomarkers Card (now in this row) */}
+          <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
+            <div className="flex items-center mb-5">
+              <div className="text-3xl mr-3">🩺</div>
+              <div className="text-base font-semibold text-white">Biomarkers</div>
+            </div>
+            <div className="text-4xl font-bold text-white tracking-tight mb-1">
+              5.1<span className="text-base text-gray-600 font-normal"> %</span>
+            </div>
+            <div className="text-sm text-gray-600 mb-5">HbA1c level</div>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Cortisol (AM)</span>
+                <span className="text-sm font-semibold text-emerald-400">12.4 μg/dL</span>
               </div>
-              <div className="text-4xl font-bold text-white tracking-tight mb-1">
-                5.1<span className="text-base text-gray-600 font-normal"> %</span>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Vitamin D</span>
+                <span className="text-sm font-semibold text-emerald-400">58 ng/mL</span>
               </div>
-              <div className="text-sm text-gray-600 mb-5">HbA1c level</div>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Cortisol (AM)</span>
-                  <span className="text-sm font-semibold text-emerald-400">12.4 μg/dL</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Vitamin D</span>
-                  <span className="text-sm font-semibold text-emerald-400">58 ng/mL</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-900">
-                  <span className="text-sm text-gray-500">Testosterone</span>
-                  <span className="text-sm font-semibold text-white">682 ng/dL</span>
-                </div>
+              <div className="flex justify-between items-center pt-3 border-t border-gray-900">
+                <span className="text-sm text-gray-500">Testosterone</span>
+                <span className="text-sm font-semibold text-white">682 ng/dL</span>
               </div>
             </div>
+          </div>
 
-            {/* Readiness Card */}
-            <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
-              <div className="flex items-center mb-5">
-                <div className="text-3xl mr-3">📈</div>
-                <div className="text-base font-semibold text-white">Readiness</div>
-              </div>
-              <div className="text-4xl font-bold text-white tracking-tight mb-1">
-                86<span className="text-base text-gray-600 font-normal"> /100</span>
-              </div>
-              <div className="text-sm text-gray-600 mb-5">Overall score</div>
-              <div className="h-16 flex items-end gap-1.5 mt-4">
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '65%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '72%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '68%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '85%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '78%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '82%' }} />
-                <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '90%' }} />
-              </div>
+          {/* Readiness Card */}
+          <div className="bg-gray-950 rounded-2xl p-6 border border-gray-900 hover:border-gray-800 transition-colors">
+            <div className="flex items-center mb-5">
+              <div className="text-3xl mr-3">📈</div>
+              <div className="text-base font-semibold text-white">Readiness</div>
+            </div>
+            <div className="text-4xl font-bold text-white tracking-tight mb-1">
+              86<span className="text-base text-gray-600 font-normal"> /100</span>
+            </div>
+            <div className="text-sm text-gray-600 mb-5">Overall score</div>
+            <div className="h-16 flex items-end gap-1.5 mt-4">
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '65%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '72%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '68%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '85%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '78%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '82%' }} />
+              <div className="flex-1 bg-gradient-to-t from-emerald-400 to-emerald-400/30 rounded-t" style={{ height: '90%' }} />
             </div>
           </div>
         </div>
@@ -255,14 +301,10 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Footer */}
+        {/* Footer (PO Box removed since moved to top) */}
         <footer className="text-center py-10 border-t border-gray-900 mt-10">
-          <div className="text-sm text-gray-600 mb-4">
+          <div className="text-sm text-gray-600">
             New episode every Friday • Started April 3, 2025
-          </div>
-          <div className="text-sm text-gray-500">
-            📬 Send letters & encouragement to:<br />
-            <span className="text-white font-medium">P.O. Box 1754, Salt Lake City, UT 84110</span>
           </div>
         </footer>
       </div>
