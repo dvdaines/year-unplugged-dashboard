@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const THUMBNAIL = "/thumbnail.png"; // put this in /public, ideally 1200x630
+const THUMBNAIL = "/thumbnail.png"; // Recommended size: 1200x630 (in /public)
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://davidd.org"),
+  metadataBase: new URL("https://yearunplugged.com"),
   title: "Year Unplugged",
   description: "What happens to your health when you don't use screens for a year?",
   manifest: "/site.webmanifest",
@@ -34,10 +34,9 @@ export const metadata: Metadata = {
   },
   themeColor: "#000000",
 
-  // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
-    url: "https://davidd.org",
+    url: "https://yearunplugged.com",
     title: "Year Unplugged",
     description: "What happens to your health when you don't use screens for a year?",
     images: [
@@ -50,7 +49,6 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Twitter
   twitter: {
     card: "summary_large_image",
     site: "@daviddorg",
@@ -60,7 +58,6 @@ export const metadata: Metadata = {
     images: [THUMBNAIL],
   },
 
-  // Some crawlers also respect this generic image field
   other: {
     "og:image": THUMBNAIL,
     "og:image:width": "1200",
