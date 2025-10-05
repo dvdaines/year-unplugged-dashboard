@@ -101,7 +101,7 @@ export default function Dashboard() {
               </div>
             </div>
             <a
-              href="https://www.youtube.com/watch?v=1FK4x84fls8"
+              href="https://www.youtube.com/shorts/_dA5i-ki-Yo"
               className="inline-flex items-center justify-center rounded-xl border border-emerald-500/40 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500/10 transition-colors"
               rel="noopener noreferrer"
               target="_blank"
@@ -122,7 +122,7 @@ export default function Dashboard() {
                   onClick={() => setIsVideoPlaying(true)}
                 >
                   <img
-                    src="https://img.youtube.com/vi/Wl_LIUhei5E/maxresdefault.jpg"
+                    src="https://img.youtube.com/vi/1FK4x84fls8/maxresdefault.jpg"
                     alt="Video thumbnail"
                     className="w-full h-full object-cover"
                   />
@@ -135,7 +135,7 @@ export default function Dashboard() {
               ) : (
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/Wl_LIUhei5E?autoplay=1"
+                  src="https://www.youtube.com/watch?v=1FK4x84fls8?autoplay=1"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
