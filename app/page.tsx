@@ -284,7 +284,7 @@ export default function Dashboard() {
           {[
             { title: 'Week 21: Testosterone is crazy', day: 'Day 147 • Sep 27' },
             { title: 'Week 20: I miss my phone so much', day: 'Day 140 • Sep 20' },
-            { title: 'Week 19: I don&apos;t miss my phone at all', day: 'Day 133 • Sep 13' },
+            { title: 'Week 19: I do not miss my phone at all', day: 'Day 133 • Sep 13' },
             { title: 'Week 18: Sleeping like a baby', day: 'Day 126 • Sep 6' }
           ].map((video, i) => (
             <div key={i} className="bg-gray-950 rounded-xl overflow-hidden border border-gray-900 hover:border-gray-800 hover:-translate-y-0.5 transition-all cursor-pointer">
