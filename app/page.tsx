@@ -163,7 +163,7 @@ export default function Dashboard() {
             </h2>
             <div className="text-sm sm:text-base text-gray-400 leading-relaxed">
               When I was 20, I moved to Silicon Valley because I was obsessed with tech and wanted to work in the industry.
-              Now, with 18 hours of screen time per day—and many with AI–I find myself asking: <br /> <br />
+              Now, with 18 hours of screen time per day—and multiple with AI–I find myself asking: <br /> <br />
               <ul>
                 <li className="text-gray-300"><em>What is it doing to my physical health?</em></  li>
                 <li className="text-gray-300">What is it doing to my life satisfaction?</li>
