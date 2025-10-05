@@ -101,7 +101,7 @@ export default function Dashboard() {
               </div>
             </div>
             <a
-              href="https://www.youtube.com/shorts/_dA5i-ki-Yo"
+              href="https://www.youtube.com/watch?v=1FK4x84fls8"
               className="inline-flex items-center justify-center rounded-xl border border-emerald-500/40 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500/10 transition-colors"
               rel="noopener noreferrer"
               target="_blank"
