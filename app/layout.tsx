@@ -12,6 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const THUMBNAIL = "/thumbnail.png"; // put this in /public, ideally 1200x630
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidd.org"),
   title: "Year Unplugged",
@@ -31,22 +33,39 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
   themeColor: "#000000",
+
+  // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
     url: "https://davidd.org",
     title: "Year Unplugged",
-    description:
-      "What happens to your health when you don't use screens for a year?",
-    images: [{ url: "/preview.png" }],
+    description: "What happens to your health when you don't use screens for a year?",
+    images: [
+      {
+        url: THUMBNAIL,
+        width: 1200,
+        height: 630,
+        alt: "Year Unplugged — one-year screen-free experiment",
+      },
+    ],
   },
+
+  // Twitter
   twitter: {
     card: "summary_large_image",
     site: "@daviddorg",
     creator: "@daviddorg",
     title: "Year Unplugged",
-    description:
-      "What happens to your health when you don't use screens for a year?",
-    images: ["/preview.png"],
+    description: "What happens to your health when you don't use screens for a year?",
+    images: [THUMBNAIL],
+  },
+
+  // Some crawlers also respect this generic image field
+  other: {
+    "og:image": THUMBNAIL,
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "twitter:image": THUMBNAIL,
   },
 };
 
@@ -57,14 +76,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="bg-black">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
