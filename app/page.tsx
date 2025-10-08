@@ -24,9 +24,10 @@ export default function Dashboard() {
 
           {/* Right: Sponsors */}
           <div className="text-right w-full sm:w-auto">
-            <div className="text-xs text-gray-600 mb-3 tracking-wider">NOT Sponsored By:</div>
+            <div className="text-xs text-gray-600 mb-3 tracking-wider">Sponsored By:</div>
             <div className="flex flex-wrap justify-end gap-x-6 gap-y-3">
-              <img
+              <p>In Talks with several blood testing & sleep tracking companies</p>
+              {/* <img
                 src="/eight-sleep-logo.svg"
                 alt="Eight Sleep"
                 className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
@@ -40,7 +41,7 @@ export default function Dashboard() {
                 src="/huberman-lab.webp"
                 alt="Huberman Lab"
                 className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
+              /> */}
             </div>
           </div>
         </header>
