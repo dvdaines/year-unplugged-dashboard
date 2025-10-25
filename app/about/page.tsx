@@ -80,7 +80,7 @@ export default function AboutPage() {
           <p>Finally, years later, I&apos;m in a position to do it.</p>
 
           <p>
-            This isn&apos;t my first public experiment. I ran a documented microplastics
+            This isn&apos;t my first public N=1 experiment. I ran a microplastics
             reduction trial (
             <a
               className="underline underline-offset-4 hover:opacity-80"
@@ -90,8 +90,8 @@ export default function AboutPage() {
             >
               Microplastics Trial I
             </a>
-            ), and realized there was value in public N=1 experiments when
-            research institutions started reaching out to me. That was an epiphany.
+            ) and realized there is real value in public N=1 experiments when
+            research institutions started reaching out to me with questions. That with was an epiphany.
           </p>
 
           <p>
