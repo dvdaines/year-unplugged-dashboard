@@ -1,28 +1,26 @@
 // app/page.tsx
 export default function Home() {
   return (
-    <main className="min-h-dvh bg-white text-neutral-900 antialiased">
+    <main className="min-h-dvh bg-cream text-ink antialiased">
       <section className="flex min-h-dvh items-center justify-center px-6">
         <div className="w-full max-w-2xl text-center">
-          {/* Logo */}
-          <img
-            src="/logo.svg"
-            alt="Year Unplugged"
-            className="mx-auto h-12 sm:h-16 mb-6"
-          />
+          {/* Wordmark (text, not image) */}
+          <h1
+            className="font-display text-[32px] leading-tight sm:text-[40px] md:text-[44px] tracking-[-0.01em] text-ink/95 mb-5"
+            aria-label="Year Unplugged"
+          >
+            Year Unplugged
+          </h1>
 
-          {/* Visually hidden H1 for accessibility/SEO */}
-          <h1 className="sr-only">Year Unplugged</h1>
-
-          {/* Clinical one-liner */}
-          <p className="text-base sm:text-lg leading-relaxed text-neutral-700">
+          {/* One-liner (clinical tone) */}
+          <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
             A prospective, year-long digital-abstinence study with dense physiologic
             and behavioral phenotyping—aiming to create the most comprehensive dataset
             to date on the health effects of eliminating screens for one year.
           </p>
 
-          {/* Tiny meta row */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-neutral-500">
+          {/* Meta row */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-ink">
             <span>Target start: Jan 1, 2026</span>
             <span>•</span>
             <span>Design: single-participant, longitudinal</span>
@@ -30,18 +28,25 @@ export default function Home() {
             <span>Measures: monthly blood panels; continuous sleep & activity</span>
           </div>
 
-          {/* CTA row (optional now; safe, non-salesy) */}
+          {/* CTAs (kept minimal; pill buttons, subtle) */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href="mailto:research@yearunplugged.com?subject=Year%20Unplugged%20—%20Research%20Collaboration"
-              className="inline-flex rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-50"
+              className="btn btn-primary"
             >
-              Research collaboration inquiries
+              Book a research call
+              <svg
+                className="ml-2 h-4 w-4 opacity-90"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M12.293 2.293a1 1 0 011.414 0l4 4a.997.997 0 01.293.704V7a1 1 0 01-1 1h-.586a1 1 0 01-.707-.293L13 4.414V13a1 1 0 11-2 0V3a1 1 0 011-1h.293z" />
+                <path d="M4 5a1 1 0 00-1 1v9a2 2 0 002 2h9a1 1 0 100-2H6a1 1 0 01-1-1V6a1 1 0 00-1-1z" />
+              </svg>
             </a>
-            <a
-              href="/YearUnplugged_1pager.pdf"
-              className="inline-flex rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium hover:bg-neutral-50"
-            >
+
+            <a href="/YearUnplugged_1pager.pdf" className="btn btn-ghost">
               1-page overview (PDF)
             </a>
           </div>
