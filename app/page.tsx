@@ -6,20 +6,19 @@ export default function Home() {
         <div className="w-full max-w-2xl text-center">
           {/* Logo + Wordmark */}
           <div className="flex items-center justify-center gap-3 mb-5">
-            <img
-              src="/yu-mark.svg"
-              alt="Year Unplugged mark"
-              width={36}
-              height={36}
-              className="inline-block align-middle select-none"
-              decoding="async"
-            />
-            <h1
-              className="font-display text-[32px] leading-tight sm:text-[40px] md:text-[44px] tracking-[-0.01em] text-ink/95 m-0"
-            >
-              Year Unplugged
-            </h1>
-          </div>
+  <img
+    src="/yu-mark.svg"
+    width={36}
+    height={36}
+    aria-hidden="true"
+    alt=""
+    className="inline-block select-none"
+    decoding="async"
+  />
+  <h1 className="font-display text-[32px] leading-tight sm:text-[40px] md:text-[44px] tracking-[-0.01em]">
+    Year Unplugged
+  </h1>
+</div>
 
           {/* One-liner (clinical tone, open-data emphasized) */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
