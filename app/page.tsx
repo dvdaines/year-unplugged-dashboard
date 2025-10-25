@@ -2,7 +2,6 @@
 export default function Home() {
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      {/* Added pb-24 for comfortable bottom spacing on short viewports */}
       <section className="flex min-h-dvh items-center justify-center px-6 pb-24">
         <div className="w-full max-w-2xl text-center">
 
@@ -38,31 +37,29 @@ export default function Home() {
             <strong className="text-ink">Hey, I&apos;m David.</strong>
           </div>
 
-          {/* Conversational one-liner with safe escaping */}
+          {/* Conversational one-liner */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
             I spend ~12 hours per day on a screen (laptop, phone). I&apos;m going to spend one year with no screens, sharing continuous sleep data and very comprehensive monthly blood panels (more, TBD). This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
           </p>
+
+          {/* About Me link */}
+          <div className="mt-5">
+            <a
+              href="/about"
+              className="text-sm font-semibold text-ink underline underline-offset-4 hover:opacity-80 transition-opacity"
+            >
+              About Me / Why I&apos;m Doing This
+            </a>
+          </div>
 
           {/* Simple details table */}
           <div className="mt-6 flex justify-center">
             <table className="details-table">
               <tbody>
-                <tr>
-                  <th scope="row">Start</th>
-                  <td>Q1, 2026</td>
-                </tr>
-                <tr>
-                  <th scope="row">Design</th>
-                  <td>Single-participant, longitudinal</td>
-                </tr>
-                <tr>
-                  <th scope="row">Measures</th>
-                  <td>Monthly blood panels; continuous sleep; More TBD</td>
-                </tr>
-                <tr>
-                  <th scope="row">Data</th>
-                  <td>Tier 1: Public release; Tier 2: For qualified research</td>
-                </tr>
+                <tr><th scope="row">Start</th><td>Q1 2026</td></tr>
+                <tr><th scope="row">Design</th><td>Single-participant, longitudinal</td></tr>
+                <tr><th scope="row">Measures</th><td>Monthly blood panels; continuous sleep &amp; activity</td></tr>
+                <tr><th scope="row">Data</th><td>De-identified release; open-data for qualified research</td></tr>
               </tbody>
             </table>
           </div>
@@ -80,8 +77,8 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Spacer to ensure breathing room even when centered on very tall screens */}
           <div className="h-6" />
+
         </div>
       </section>
     </main>
