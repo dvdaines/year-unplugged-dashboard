@@ -27,12 +27,12 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I&apos;ve known nothing but a life with the internet. When I was 14, my dad
-            gave me my first computer and I became obsessed with technology and coding.
+            I&apos;ve known nothing but a life with the internet. As a kid, I played online games constantly. When I was 14, my dad
+            gave me my first computer, and I became obsessed with technology and coding.
           </p>
 
           <p>
-            When I turned 20, I moved to Silicon Valley to chase a dream. My apartment
+            When I turned 20, I moved to Silicon Valley to chase a dream. My apartment on Ocean Beach
             became a startup office, and I designed the first product (
             <a
               className="underline"
@@ -62,18 +62,19 @@ export default function AboutPage() {
             >
               YouTube demo
             </a>
-            ). I once put everything away for a week — and my brain felt like it
-            <strong> turned back on</strong>.
+            ). I once put everything away for a week, and my brain felt like it
+            <strong> turned back on</strong>. I slept well. I could think again.
           </p>
 
           <p>
             That proved a scary realization: maybe we&apos;ve all been boiled like frogs,
-            just slowly enough to not notice.
+            just slowly enough to not notice. And I started to wonder...
           </p>
 
           <blockquote className="border-l-4 border-ink/20 pl-4 italic text-ink my-2 py-1">
             <strong>What would a year without screens do to my brain and my body?</strong>
           </blockquote>
+<br />
 
           <p>
             This isn&apos;t my first public experiment. I ran a documented microplastics
@@ -86,7 +87,7 @@ export default function AboutPage() {
             >
               Microplastics Trial I
             </a>
-            ), and realized there was some value in these public N=1 experiments when
+            ), and realized there was some value in public N=1 experiments when
             research institutions started reaching out to me. That was an epiphany.
           </p>
 
@@ -99,7 +100,7 @@ export default function AboutPage() {
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
             on screenless living — and releasing <strong>open data</strong> so real
-            scientists can investigate the effects.
+            scientists can investigate the effects: continuous sleep data (before and during), 100+ blood markers, etc.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
