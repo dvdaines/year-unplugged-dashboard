@@ -55,7 +55,7 @@ export default function Home() {
           {/* CTAs (no icon) */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="mailto:research@yearunplugged.com?subject=Year%20Unplugged%20—%20Research%20Collaboration"
+              href="mailto:david@davidd.org?subject=Year%20Unplugged%20—%20Research%20Collaboration"
               className="btn btn-primary"
             >
               Research collaboration inquiries
