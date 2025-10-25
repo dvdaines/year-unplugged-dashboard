@@ -28,7 +28,7 @@ export default function AboutPage() {
 
           <p>
             I&apos;ve known nothing but a life with screens and internet. As a kid, I played online games constantly. When I was 14, my dad
-            gave me my first computer, and I became obsessed with technology and coding. These days, I&apos;m logging 12 hours a day.
+            gave me my first computer, and I became obsessed with technology and coding.
           </p>
 
           <p>
