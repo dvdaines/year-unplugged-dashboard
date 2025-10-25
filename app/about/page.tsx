@@ -1,3 +1,4 @@
+// app/about/page.tsx
 export default function AboutPage() {
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
@@ -9,7 +10,7 @@ export default function AboutPage() {
         </h1>
 
         {/* Profile */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-10">
           <img
             src="/profile.jpg"
             alt="David"
@@ -19,7 +20,12 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="prose prose-lg max-w-none text-muted-ink">
+        <div className="text-muted-ink text-base sm:text-lg leading-relaxed space-y-6">
+
+          <p className="text-ink font-semibold">
+            My name is David Daines.
+          </p>
+
           <p>
             I&apos;ve known nothing but a life with the internet. When I was 14, my dad
             gave me my first computer and I became obsessed with technology and coding.
@@ -27,9 +33,14 @@ export default function AboutPage() {
 
           <p>
             When I turned 20, I moved to Silicon Valley to chase a dream. My apartment
-            became a startup office (
-            <a className="underline" href="https://www.coindesk.com/business/2021/11/17/a16z-leads-31m-funding-round-for-mems-social-media-protocol" target="_blank" rel="noopener noreferrer">
-              my first product launch
+            became a startup office, and I designed the first product (
+            <a
+              className="underline"
+              href="https://www.coindesk.com/business/2021/11/17/a16z-leads-31m-funding-round-for-mems-social-media-protocol"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              press link
             </a>
             ).
           </p>
@@ -43,7 +54,12 @@ export default function AboutPage() {
 
           <p>
             I even built a hardware prototype to <em>lock up</em> all my devices (
-            <a className="underline" href="https://m.youtube.com/watch?v=-dAzeY-s4Ic&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fsiliconvault.io%2F" target="_blank" rel="noopener noreferrer">
+            <a
+              className="underline"
+              href="https://m.youtube.com/watch?v=-dAzeY-s4Ic&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fsiliconvault.io%2F"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               YouTube demo
             </a>
             ). I once put everything away for a week — and my brain felt like it
@@ -55,21 +71,23 @@ export default function AboutPage() {
             just slowly enough to not notice.
           </p>
 
-          <p>
-            I became obsessed with one question:
-          </p>
-
-          <blockquote>
+          <blockquote className="border-l-4 border-ink/20 pl-4 italic text-ink my-2 py-1">
             <strong>What would a year without screens do to my brain and my body?</strong>
           </blockquote>
 
           <p>
             This isn&apos;t my first public experiment. I ran a documented microplastics
             reduction trial (
-            <a className="underline" href="https://davidd.org/experiments/microplastics-trial-i" target="_blank" rel="noopener noreferrer">
+            <a
+              className="underline"
+              href="https://davidd.org/experiments/microplastics-trial-i"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Microplastics Trial I
             </a>
-            ), which helped scientists identify new questions to pursue.
+            ), and realized there was some value in these public N=1 experiments when
+            research institutions started reaching out to me. That was an epiphany.
           </p>
 
           <p>
@@ -81,27 +99,31 @@ export default function AboutPage() {
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
             on screenless living — and releasing <strong>open data</strong> so real
-            scientists can make sense of it.
+            scientists can investigate the effects.
           </p>
 
-          <p>
-            No phone. No computer. No TV. No screens at all.
-            <br />For a year.
+          <p className="text-ink font-semibold leading-snug">
+            No phone.<br />
+            No computer.<br />
+            No TV.<br />
+            No screens at all.<br />
+            <br />
+            For a year.
           </p>
 
           <p className="text-ink font-semibold">
             I want to discover what we&apos;ve left behind.
           </p>
+        </div>
 
-          {/* CTA */}
-          <div className="mt-8 text-center">
-            <a
-              href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
-              className="btn btn-primary"
-            >
-              Research collaboration inquiries
-            </a>
-          </div>
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <a
+            href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
+            className="btn btn-primary"
+          >
+            Research collaboration inquiries
+          </a>
         </div>
 
       </section>
