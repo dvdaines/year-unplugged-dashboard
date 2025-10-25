@@ -60,6 +60,11 @@ export const metadata: Metadata = {
     "og:image:height": "630",
     "twitter:image": THUMBNAIL,
   },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
 };
 
 export const viewport: Viewport = {
