@@ -92,13 +92,13 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician. And I ran rat experiments in my parent&apos;s basement as a teen. Point is? I love this stuff, and I know where I fit in the picture.
+            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician and ran rat experiments in my parent&apos;s basement as a teen. Point being? I love this stuff, and I know where I fit in.
           </p>
 
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
-            on screenless living — and releasing <strong>open data</strong> so real
-            scientists can investigate the effects: continuous sleep data (before and during), 100+ blood markers, etc.
+            on screenless living — and releasing <strong>open data</strong> (including two months of baseline) so real
+            scientists can investigate further: continuous sleep data, 100+ blood markers, etc.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
