@@ -119,7 +119,7 @@ export default function AboutPage() {
         {/* CTA */}
 <div className="mt-12 text-center space-y-4">
   <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-    Target start is Q1, 2026. If you’re a researcher who wants to gather data, I’ll consider it. Currently seeking a PI.
+    Target start is Q1, 2026. If you’re a researcher who wants to gather data, I’ll consider it.
   </p>
 
   <a
