@@ -92,11 +92,6 @@ export default function AboutPage() {
             ), and realized there was value in public N=1 experiments when
             research institutions started reaching out to me. That was an epiphany.
           </p>
-
-          <p>
-            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician and ran rat experiments in my parent&apos;s basement as a teen. Point being: I love this stuff, and I know where I fit in.
-          </p>
-
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
             on screenless living — and releasing <strong>open data</strong> (including two months of baseline) so real
