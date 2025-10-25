@@ -39,10 +39,7 @@ export default function Home() {
 
           {/* One-liner (slightly rephrased to follow intro) */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
-            This is a prospective, year-long digital-abstinence study with dense physiologic
-            and behavioral phenotyping—targeting an <strong>open-data</strong>,
-            researcher-accessible dataset on the health effects of eliminating screens
-            for one year.
+            I spend ~12 hours per day on a screen (laptop, phone). I'm going to spend one year with no screens, sharing continuous sleep data and very comprehensive monthly blood panels (more, TBD). This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
           </p>
 
           {/* Simple details table */}
