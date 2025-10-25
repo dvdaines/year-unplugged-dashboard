@@ -28,7 +28,7 @@ export default function AboutPage() {
 
           <p>
             I&apos;ve known nothing but a life with the internet. As a kid, I played online games constantly. When I was 14, my dad
-            gave me my first computer, and I became obsessed with technology and coding.
+            gave me my first computer, and I became obsessed with technology and coding. As of now? I'm logging ~12 hours a day.
           </p>
 
           <p>
@@ -92,9 +92,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I&apos;m not an institutional scientist — but I do have some background:
-            running rat experiments in my parents&apos; basement in high school and
-            working as a medical researcher for an ex-Stanford professor.
+            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician. And I ran rat experiments in my parent&apos;s basement as a teen. Point is? I love this stuff, and I know where I fit in the picture.
           </p>
 
           <p>
