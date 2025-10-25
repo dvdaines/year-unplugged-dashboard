@@ -19,9 +19,8 @@ const THUMBNAIL = "/thumbnail.PNG";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
-  title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
-  description:
-    "A prospective, year-long digital-abstinence study with dense physiologic and behavioral phenotyping—aiming to create the most comprehensive dataset to date on the health effects of eliminating screens for one year.",
+  title: "Year Unplugged, an N=1",
+  description: "One year, Zero screens, Hundreds of biomarkers",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   appleWebApp: {
-    title: "Year Unplugged",
+    title: "Year Unplugged, an N=1",
     capable: true,
     statusBarStyle: "default",
   },
@@ -40,18 +39,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://yearunplugged.com",
-    title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
-    description:
-      "Dense physiologic & behavioral phenotyping of a year without screens.",
+    title: "Year Unplugged, an N=1",
+    description: "One year, Zero screens, Hundreds of biomarkers",
     images: [{ url: THUMBNAIL, width: 1200, height: 630, alt: "Year Unplugged" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@daviddorg",
     creator: "@daviddorg",
-    title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
-    description:
-      "Dense physiologic & behavioral phenotyping of a year without screens.",
+    title: "Year Unplugged, an N=1",
+    description: "One year, Zero screens, Hundreds of biomarkers",
     images: [THUMBNAIL],
   },
   other: {
