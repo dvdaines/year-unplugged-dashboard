@@ -35,7 +35,7 @@ export default function AboutPage() {
             When I turned 20, I moved to Silicon Valley to chase a dream. My apartment on Ocean Beach
             became a startup office, and I designed the first product (
             <a
-              className="underline"
+              className="underline underline-offset-4 hover:opacity-80"
               href="https://www.coindesk.com/business/2021/11/17/a16z-leads-31m-funding-round-for-mems-social-media-protocol"
               target="_blank"
               rel="noopener noreferrer"
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <p>
             It got so bad, I even built a hardware prototype to <em>lock up</em> all my devices on a timed basis (
             <a
-              className="underline"
+              className="underline underline-offset-4 hover:opacity-80"
               href="https://m.youtube.com/watch?v=-dAzeY-s4Ic&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fsiliconvault.io%2F"
               target="_blank"
               rel="noopener noreferrer"
@@ -74,15 +74,16 @@ export default function AboutPage() {
           <blockquote className="border-l-4 border-ink/20 pl-4 italic text-ink my-2 py-1">
             <strong>What would a year without screens do to my brain and my body?</strong>
           </blockquote>
-<br />
 
-<p>Finally, years later, I&apos;m in a position to do it.</p>
+          <br />
+
+          <p>Finally, years later, I&apos;m in a position to do it.</p>
 
           <p>
             This isn&apos;t my first public experiment. I ran a documented microplastics
             reduction trial (
             <a
-              className="underline"
+              className="underline underline-offset-4 hover:opacity-80"
               href="https://davidd.org/experiments/microplastics-trial-i"
               target="_blank"
               rel="noopener noreferrer"
@@ -92,10 +93,29 @@ export default function AboutPage() {
             ), and realized there was value in public N=1 experiments when
             research institutions started reaching out to me. That was an epiphany.
           </p>
+
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
             on screenless living — and releasing <strong>open data</strong> (including two months of baseline) so real
-            scientists can investigate further: continuous sleep data, 100+ blood markers, video updates, etc.
+            scientists can investigate further:{' '}
+            <a
+              href="https://ouraring.com"
+              className="underline underline-offset-4 hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              continuous sleep data
+            </a>
+            ,{' '}
+            <a
+              href="https://superpower.com/biomarkers"
+              className="underline underline-offset-4 hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              100+ monthly biomarkers
+            </a>
+            , video updates, etc.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
@@ -110,21 +130,22 @@ export default function AboutPage() {
           <p className="text-ink font-semibold">
             I want to discover what we&apos;ve left behind.
           </p>
+
         </div>
 
         {/* CTA */}
-<div className="mt-12 text-center space-y-4">
-  <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-    Target start is Q1, 2026. If you’re a researcher who wants to gather data, contact me.
-  </p>
+        <div className="mt-12 text-center space-y-4">
+          <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
+            Target start is Q1, 2026. If you’re a researcher who wants to gather data, contact me.
+          </p>
 
-  <a
-    href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
-    className="btn btn-primary"
-  >
-    Research collaboration inquiries
-  </a>
-</div>
+          <a
+            href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
+            className="btn btn-primary"
+          >
+            Research collaboration inquiries
+          </a>
+        </div>
 
       </section>
     </main>
