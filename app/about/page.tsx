@@ -91,7 +91,7 @@ export default function AboutPage() {
               Microplastics Trial I
             </a>
             ) and realized there is real value in public N=1 experiments when
-            research institutions started reaching out to me with questions. That with was an epiphany.
+            institutional researchers started reaching out to me with questions. That was an epiphany.
           </p>
 
           <p>
