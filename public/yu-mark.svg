@@ -1,28 +1,27 @@
 <!-- /public/yu-mark.svg -->
 <svg
   xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
   width="64"
   height="64"
-  viewBox="0 0 64 64"
+  fill="none"
+  stroke="#F6F1E8"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
   role="img"
   aria-labelledby="title"
 >
   <title id="title">Year Unplugged Mark</title>
 
-  <!-- Dark circle -->
-  <circle cx="32" cy="32" r="28" fill="#1E1B16" />
+  <!-- Dark circle background (espresso/ink) -->
+  <circle cx="12" cy="12" r="11" fill="#1E1B16" />
 
-  <!-- Cream Y — centered, slightly taller for better visual balance -->
-  <text
-    x="50%"
-    y="50%"
-    dominant-baseline="middle"
-    text-anchor="middle"
-    font-family="serif"
-    font-weight="600"
-    font-size="38"
-    fill="#F6F1E8"
-  >
-    Y
-  </text>
+  <!-- Official Lucide 'unplug' icon paths (unchanged geometry) -->
+  <path d="m19 5 3-3" />
+  <path d="m2 22 3-3" />
+  <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" />
+  <path d="M7.5 13.5 10 11" />
+  <path d="M10.5 16.5 13 14" />
+  <path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z" />
 </svg>
