@@ -95,9 +95,6 @@ export default function Home() {
             >
               Research collaboration inquiries
             </a>
-            <a href="/YearUnplugged_1pager.pdf" className="btn btn-ghost">
-              1-page overview (PDF)
-            </a>
           </div>
 
           <div className="h-6" />
