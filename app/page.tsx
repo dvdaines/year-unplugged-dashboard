@@ -61,7 +61,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <th scope="row">Data</th>
-                  <td>De-identified release; open-data for qualified research</td>
+                  <td>Tier 1: Public release; Tier 2: For qualified research</td>
                 </tr>
               </tbody>
             </table>
