@@ -1,0 +1,74 @@
+<!-- /public/yu-mark.svg -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  width="64"
+  height="64"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Year Unplugged Mark</title>
+  <desc id="desc">
+    Circular medallion with negative-space U and Y, designed for a clinical research feel.
+  </desc>
+
+  <!--
+    Colors:
+      - Ink (foreground): #1E1B16
+      - Cream (background punch-out): uses mask so it will "cut out" regardless of page bg.
+    If you'd rather force a two-tone, uncomment the two-tone block and remove the mask block.
+  -->
+
+  <!-- Base circle -->
+  <defs>
+    <!-- Create a mask that removes the U and Y shapes from the filled circle -->
+    <mask id="yu-cut" maskUnits="userSpaceOnUse">
+      <!-- Start fully visible (white rectangle) -->
+      <rect x="0" y="0" width="64" height="64" fill="#fff" />
+      <!-- Punch out the U and Y (black = hidden) -->
+      <!-- U shape: rounded "container" -->
+      <path
+        d="M20 24 v12
+           a12 12 0 0 0 24 0 v-12"
+        fill="none"
+        stroke="#000"
+        stroke-width="6.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <!-- Y stem + split -->
+      <path
+        d="M32 24 v-6
+           M32 24 l-6 -6
+           M32 24 l6 -6"
+        fill="none"
+        stroke="#000"
+        stroke-width="5.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <!-- Tiny notch at the outer ring (suggests 'unplug'/break in circuit) -->
+      <path
+        d="M50.5 12.5 a26 26 0 0 1 4.5 6.3"
+        fill="none"
+        stroke="#000"
+        stroke-width="6"
+        stroke-linecap="round"
+      />
+    </mask>
+  </defs>
+
+  <!-- Filled medallion in 'ink' with the mask subtracting U/Y -->
+  <circle cx="32" cy="32" r="28" fill="#1E1B16" mask="url(#yu-cut)" />
+
+  <!-- Thin outer ring for delicacy on light backgrounds -->
+  <circle
+    cx="32"
+    cy="32"
+    r="28"
+    fill="none"
+    stroke="#1E1B16"
+    stroke-width="1.25"
+    opacity="0.85"
+  />
+</svg>
