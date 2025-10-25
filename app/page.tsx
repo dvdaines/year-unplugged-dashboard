@@ -7,7 +7,7 @@ export default function Home() {
           {/* Logo + Wordmark */}
           <div className="flex items-center justify-center gap-3 mb-5">
             <img
-              src="/yu-mark-solid.svg"
+              src="/yu-mark.svg"
               alt="Year Unplugged mark"
               width={36}
               height={36}
