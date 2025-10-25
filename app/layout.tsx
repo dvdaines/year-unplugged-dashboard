@@ -15,7 +15,7 @@ const sans = Inter({
   variable: "--font-sans",
 });
 
-const THUMBNAIL = "/thumbnail.png";
+const THUMBNAIL = "/thumbnail.PNG";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
