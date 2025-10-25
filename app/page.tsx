@@ -24,7 +24,7 @@ export default function Home() {
           {/* One-liner (clinical tone, open-data emphasized) */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
             A prospective, year-long digital-abstinence study with dense physiologic
-            and behavioral phenotyping—targeting an <strong>open-data</strong>,
+            and behavioral phenotyping—targeting an open-data,
             researcher-accessible dataset on the health effects of eliminating screens
             for one year.
           </p>
@@ -35,7 +35,7 @@ export default function Home() {
               <tbody>
                 <tr>
                   <th scope="row">Start</th>
-                  <td>Q1 2026</td>
+                  <td>Q1, 2026</td>
                 </tr>
                 <tr>
                   <th scope="row">Design</th>
@@ -47,7 +47,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <th scope="row">Data</th>
-                  <td>De-identified release; open-data for qualified research</td>
+                  <td>Open-data for qualified research</td>
                 </tr>
               </tbody>
             </table>
