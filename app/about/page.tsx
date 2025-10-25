@@ -87,7 +87,7 @@ export default function AboutPage() {
             >
               Microplastics Trial I
             </a>
-            ), and realized there was some value in public N=1 experiments when
+            ), and realized there was value in public N=1 experiments when
             research institutions started reaching out to me. That was an epiphany.
           </p>
 
