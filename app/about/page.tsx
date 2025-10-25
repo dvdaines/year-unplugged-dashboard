@@ -76,8 +76,7 @@ export default function AboutPage() {
           </blockquote>
 <br />
 
-<p>Finally, years later, I&nbsp;m in a position to do it.</p>
-<br />
+<p>Finally, years later, I&apos;m in a position to do it.</p>
 
           <p>
             This isn&apos;t my first public experiment. I ran a documented microplastics
