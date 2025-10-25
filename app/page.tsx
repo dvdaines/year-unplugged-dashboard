@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      <section className="flex min-h-dvh items-center justify-center px-6 pb-24">
+      <section className="flex min-h-dvh items-center justify-center px-6 py-16">
         <div className="w-full max-w-2xl text-center">
 
           {/* Logo + Wordmark */}
