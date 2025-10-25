@@ -92,13 +92,13 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician and ran rat experiments in my parent&apos;s basement as a teen. Point being? I love this stuff, and I know where I fit in.
+            I&apos;m not an institutional scientist — though I did work as a medical researcher for an ex-Stanford physician and ran rat experiments in my parent&apos;s basement as a teen. Point being: I love this stuff, and I know where I fit in.
           </p>
 
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
             on screenless living — and releasing <strong>open data</strong> (including two months of baseline) so real
-            scientists can investigate further: continuous sleep data, 100+ blood markers, etc.
+            scientists can investigate further: continuous sleep data, 100+ blood markers, video updates, etc.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
@@ -108,7 +108,6 @@ export default function AboutPage() {
             No screens at all.<br />
             <br />
             For a year. <br />
-            With public video updates.
           </p>
 
           <p className="text-ink font-semibold">
