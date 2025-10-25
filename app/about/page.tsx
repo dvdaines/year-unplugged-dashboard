@@ -107,7 +107,8 @@ export default function AboutPage() {
             No TV.<br />
             No screens at all.<br />
             <br />
-            For a year.
+            For a year. <br />
+            With public video updates.
           </p>
 
           <p className="text-ink font-semibold">
