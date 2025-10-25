@@ -39,7 +39,8 @@ export default function Home() {
 
           {/* Conversational one-liner */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
-            I spend ~12 hours per day on a screen (laptop, phone). I&apos;m going to spend one year with no screens, sharing continuous sleep data and very comprehensive monthly blood panels (more, TBD). This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
+            I spend 12 hours per day on a screen (laptop, phone). And soon, I&apos;m going to spend one year with no screens, sharing sleep data and 100+ monthly blood markers with video
+updates. This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
           </p>
 
           {/* About Me link */}
