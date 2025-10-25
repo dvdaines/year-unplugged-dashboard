@@ -23,7 +23,7 @@ export default function Home() {
           {/* Profile */}
           <div className="flex justify-center mb-6">
             <img
-              src="/profile.PNG"
+              src="/profile.jpg"
               alt="David"
               width={96}
               height={96}
@@ -72,7 +72,7 @@ export default function Home() {
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="mailto:research@yearunplugged.com?subject=Year%20Unplugged%20—%20Research%20Collaboration"
+              href="mailto:david@davidd.org?subject=Year%20Unplugged%20—%20Research%20Collaboration"
               className="btn btn-primary"
             >
               Research collaboration inquiries
