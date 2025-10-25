@@ -57,7 +57,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <th scope="row">Measures</th>
-                  <td>Monthly blood panels; continuous sleep &amp; activity</td>
+                  <td>Monthly blood panels; continuous sleep; More TBD</td>
                 </tr>
                 <tr>
                   <th scope="row">Data</th>
