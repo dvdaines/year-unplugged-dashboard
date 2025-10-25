@@ -7,8 +7,12 @@
   role="img"
   aria-labelledby="title"
 >
-  <title id="title">Y Mark</title>
-  <rect width="64" height="64" fill="none"/>
+  <title id="title">Year Unplugged Mark</title>
+
+  <!-- Dark circle -->
+  <circle cx="32" cy="32" r="28" fill="#1E1B16" />
+
+  <!-- Cream Y — centered, slightly taller for better visual balance -->
   <text
     x="50%"
     y="50%"
@@ -16,8 +20,8 @@
     text-anchor="middle"
     font-family="serif"
     font-weight="600"
-    font-size="48"
-    fill="#1E1B16"
+    font-size="38"
+    fill="#F6F1E8"
   >
     Y
   </text>
