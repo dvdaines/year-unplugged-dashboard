@@ -53,7 +53,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I even built a hardware prototype to <em>lock up</em> all my devices (
+            I even built a hardware prototype to <em>lock up</em> all my devices on a timer (
             <a
               className="underline"
               href="https://m.youtube.com/watch?v=-dAzeY-s4Ic&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fsiliconvault.io%2F"
