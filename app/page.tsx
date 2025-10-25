@@ -4,14 +4,16 @@ export default function Home() {
     <main className="min-h-dvh bg-cream text-ink antialiased">
       <section className="flex min-h-dvh items-center justify-center px-6">
         <div className="w-full max-w-2xl text-center">
-          {/* Wordmark (text, not image) */}
-          <h1
-            className="font-display text-[32px] leading-tight sm:text-[40px] md:text-[44px] tracking-[-0.01em] text-ink/95 mb-5"
-            aria-label="Year Unplugged"
-          >
-            Year Unplugged
-          </h1>
-
+          {/* Wordmark + Logo */}
+          <img
+  src="/yu-mark.svg"
+  alt=""
+  aria-hidden="true"
+  className="mr-3 h-7 w-7 sm:h-9 sm:w-9"
+/>
+<h1 className="font-display text-[32px] sm:text-[40px] tracking-[-0.01em]">
+  Year Unplugged
+</h1>
           {/* One-liner (clinical tone) */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
             A prospective, year-long digital-abstinence study with dense physiologic
