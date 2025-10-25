@@ -59,8 +59,8 @@ updates. This project will generate the richest open dataset documenting the hea
               <tbody>
                 <tr><th scope="row">Start</th><td>Q1 2026</td></tr>
                 <tr><th scope="row">Design</th><td>Single-participant, longitudinal</td></tr>
-                <tr><th scope="row">Measures</th><td>Monthly blood panels; continuous sleep &amp; activity</td></tr>
-                <tr><th scope="row">Data</th><td>De-identified release; open-data for qualified research</td></tr>
+                <tr><th scope="row">Measures</th><td>Monthly blood panels; continuous sleep; more, TBD</td></tr>
+                <tr><th scope="row">Data</th><td>Open Data</td></tr>
               </tbody>
             </table>
           </div>
