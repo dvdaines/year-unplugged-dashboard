@@ -117,14 +117,18 @@ export default function AboutPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
-          <a
-            href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
-            className="btn btn-primary"
-          >
-            Research collaboration inquiries
-          </a>
-        </div>
+<div className="mt-12 text-center space-y-4">
+  <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
+    Target start is Q1, 2026. If you’re a researcher who wants to gather data, I’ll consider it. Currently seeking a PI.
+  </p>
+
+  <a
+    href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
+    className="btn btn-primary"
+  >
+    Research collaboration inquiries
+  </a>
+</div>
 
       </section>
     </main>
