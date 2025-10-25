@@ -6,7 +6,7 @@ export default function AboutPage() {
 
         {/* Title */}
         <h1 className="font-display text-[32px] sm:text-[40px] tracking-[-0.01em] text-center mb-10">
-          Why I&apos;m Doing This
+          Why I&apos;m Going A Year Without Screens
         </h1>
 
         {/* Profile */}
