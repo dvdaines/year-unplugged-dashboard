@@ -1,19 +1,21 @@
+// app/layout.tsx
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const display = Fraunces({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
+const sans = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const THUMBNAIL = "/thumbnail.png"; // Recommended size: 1200x630 (in /public)
+const THUMBNAIL = "/thumbnail.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
@@ -32,16 +34,16 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "Year Unplugged",
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
   },
-  themeColor: "#ffffff",
+  themeColor: "#F6F1E8",
   openGraph: {
     type: "website",
     url: "https://yearunplugged.com",
     title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
     description:
       "Dense physiologic & behavioral phenotyping of a year without screens.",
-    images: [{ url: "/thumbnail.png", width: 1200, height: 630, alt: "Year Unplugged" }],
+    images: [{ url: THUMBNAIL, width: 1200, height: 630, alt: "Year Unplugged" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -50,21 +52,27 @@ export const metadata: Metadata = {
     title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
     description:
       "Dense physiologic & behavioral phenotyping of a year without screens.",
-    images: ["/thumbnail.png"],
+    images: [THUMBNAIL],
+  },
+  other: {
+    "og:image": THUMBNAIL,
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "twitter:image": THUMBNAIL,
   },
 };
 
 export const viewport: Viewport = {
-  colorScheme: "dark",
-  themeColor: "#000000",
+  colorScheme: "light",
+  themeColor: "#F6F1E8",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="bg-black">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className="bg-cream">
+      <body className={`${display.variable} ${sans.variable} antialiased bg-cream text-ink`}>
         {children}
         <Analytics />
       </body>
