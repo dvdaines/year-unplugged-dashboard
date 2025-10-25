@@ -49,7 +49,7 @@ export default function Home() {
               <tbody>
                 <tr>
                   <th scope="row">Start</th>
-                  <td>Q1 2026</td>
+                  <td>Q1, 2026</td>
                 </tr>
                 <tr>
                   <th scope="row">Design</th>
