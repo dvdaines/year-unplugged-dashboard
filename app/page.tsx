@@ -39,8 +39,8 @@ export default function Home() {
 
           {/* Conversational one-liner */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
-            I spend 12 hours per day on a screen. And soon, I&apos;m going to spend one year with no screens, sharing sleep data and 100+ monthly blood markers + video
-updates. This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
+            I spend 12 hours per day on a screen. And soon, I&apos;m going to spend one year with no screens, sharing <a href="https://ouraring.com" className="underline underline-offset-4 hover:opacity-80">sleep data</a> and <a href="https://superpower.com/biomarkers" className="underline underline-offset-4 hover:opacity-80">monthly biomarkers</a> + video
+            updates on a public dashboard. This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
           </p>
 
           {/* About Me link */}
@@ -57,10 +57,29 @@ updates. This project will generate the richest open dataset documenting the hea
           <div className="mt-6 flex justify-center">
             <table className="details-table">
               <tbody>
-                <tr><th scope="row">Start</th><td>Q1, 2026</td></tr>
-                <tr><th scope="row">Design</th><td>Single-participant, longitudinal</td></tr>
-                <tr><th scope="row">Measures</th><td>Monthly blood panels; continuous sleep; more, TBD</td></tr>
-                <tr><th scope="row">Data</th><td>Open Data</td></tr>
+                <tr>
+                  <th scope="row">Start</th>
+                  <td>Q1, 2026</td>
+                </tr>
+                <tr>
+                  <th scope="row">Design</th>
+                  <td>Single-participant, longitudinal</td>
+                </tr>
+                <tr>
+                  <th scope="row">Measures</th>
+                  <td>
+                    <a href="https://superpower.com/biomarkers" className="underline underline-offset-4 hover:opacity-80">
+                      Monthly biomarkers
+                    </a>;{' '}
+                    <a href="https://ouraring.com" className="underline underline-offset-4 hover:opacity-80">
+                      continuous sleep
+                    </a>; more, TBD
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>Open data</td>
+                </tr>
               </tbody>
             </table>
           </div>
