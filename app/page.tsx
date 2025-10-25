@@ -40,7 +40,7 @@ export default function Home() {
           {/* Conversational one-liner */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
             I spend 12 hours per day on a screen. And soon, I&apos;m going to spend one year with no screens, sharing <a href="https://ouraring.com" className="underline underline-offset-4 hover:opacity-80">sleep data</a> and <a href="https://superpower.com/biomarkers" className="underline underline-offset-4 hover:opacity-80">monthly biomarkers</a> + video
-            updates on a public dashboard. This project will generate the richest open dataset documenting the health effects of eliminating screens for one year.
+            updates on a public dashboard. This project will generate the richest open dataset documenting the health effects of eliminating screens for a prolonged period.
           </p>
 
           {/* About Me link */}
