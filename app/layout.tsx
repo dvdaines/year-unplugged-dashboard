@@ -17,8 +17,9 @@ const THUMBNAIL = "/thumbnail.png"; // Recommended size: 1200x630 (in /public)
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
-  title: "Year Unplugged",
-  description: "What happens to your health when you don't use screens for a year?",
+  title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
+  description:
+    "A prospective, year-long digital-abstinence study with dense physiologic and behavioral phenotyping—aiming to create the most comprehensive dataset to date on the health effects of eliminating screens for one year.",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -33,37 +34,23 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "black-translucent",
   },
-  themeColor: "#000000",
-
+  themeColor: "#ffffff",
   openGraph: {
     type: "website",
     url: "https://yearunplugged.com",
-    title: "Year Unplugged",
-    description: "What happens to your health when you don't use screens for a year?",
-    images: [
-      {
-        url: THUMBNAIL,
-        width: 1200,
-        height: 630,
-        alt: "Year Unplugged — one-year screen-free experiment",
-      },
-    ],
+    title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
+    description:
+      "Dense physiologic & behavioral phenotyping of a year without screens.",
+    images: [{ url: "/thumbnail.png", width: 1200, height: 630, alt: "Year Unplugged" }],
   },
-
   twitter: {
     card: "summary_large_image",
     site: "@daviddorg",
     creator: "@daviddorg",
-    title: "Year Unplugged",
-    description: "What happens to your health when you don't use screens for a year?",
-    images: [THUMBNAIL],
-  },
-
-  other: {
-    "og:image": THUMBNAIL,
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "twitter:image": THUMBNAIL,
+    title: "Year Unplugged — Prospective Year-Long Digital-Abstinence Study",
+    description:
+      "Dense physiologic & behavioral phenotyping of a year without screens.",
+    images: ["/thumbnail.png"],
   },
 };
 
