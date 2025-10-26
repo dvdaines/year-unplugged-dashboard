@@ -137,7 +137,7 @@ export default function AboutPage() {
           </p>
 
           <p className="text-ink font-semibold">
-            What will we discover?
+            One year, zero screens, hundreds of biomarkers. What will we discover?
           </p>
 
         </div>
