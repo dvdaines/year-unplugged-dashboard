@@ -23,7 +23,16 @@ export default function AboutPage() {
         <div className="text-muted-ink text-base sm:text-lg leading-relaxed space-y-6">
 
           <p className="text-ink font-semibold">
-            My name is David Daines.
+            My name is{" "}
+            <a
+              href="https://x.com/daviddorg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:opacity-80"
+            >
+              David Daines
+            </a>
+            .
           </p>
 
           <p>
