@@ -89,7 +89,7 @@ export default function AboutPage() {
           <p>Finally, years later, I&apos;m in a position to do it.</p>
 
           <p>
-            This isn&apos;t my first public N=1 experiment. I ran a microplastics
+            This isn&apos;t my first public N=1 experiment. I ran a six month microplastics
             reduction trial (
             <a
               className="underline underline-offset-4 hover:opacity-80"
