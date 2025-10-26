@@ -124,7 +124,7 @@ export default function AboutPage() {
             >
               100+ monthly biomarkers
             </a>
-            , video updates, etc.
+            , video updates, etc. all shared on a public dashboard.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
@@ -137,7 +137,7 @@ export default function AboutPage() {
           </p>
 
           <p className="text-ink font-semibold">
-            I want to discover what we&apos;ve left behind.
+            What will we discover?
           </p>
 
         </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
         {/* CTA */}
         <div className="mt-12 text-center space-y-4">
           <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-            Target start is Q1, 2026. If you’re a researcher who wants to gather data, contact me.
+            Target start is Q1, 2026. If you’re a researcher in the SF Bay Area who wants to gather data, contact me.
           </p>
 
           <a
