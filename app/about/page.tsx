@@ -41,7 +41,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            When I turned 20, I moved to Silicon Valley to chase a dream. My apartment on Ocean Beach
+            When I turned 20, I moved to Silicon Valley to chase a dream. My apartment near Ocean Beach
             became a startup office, and I designed the first product (
             <a
               className="underline underline-offset-4 hover:opacity-80"
@@ -51,11 +51,11 @@ export default function AboutPage() {
             >
               press link
             </a>
-            ).
+            ) for my friends' company before opting out of the founding engineer role. It didn't feel like the right fit.
           </p>
 
           <p>
-            But over time, I started to feel like a frog who had been slowly boiled. My
+            I kept working on computers though, and over time, I started to feel like a frog who had been slowly boiled. My
             cognition wasn&apos;t right — even though I ate well, worked out, and tried to
             optimize my sleep. It felt like the more time I spent on devices, the worse
             it got.
