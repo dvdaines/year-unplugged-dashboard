@@ -87,7 +87,7 @@ export default function Home() {
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-            Target start is Q1, 2026. If you’re a researcher who wants to gather data, contact me.
+            Target start is Q1, 2026. If you’re a researcher in The SF Bay Area who wants to gather data, get in touch.
             </p>
             <a
               href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
