@@ -51,7 +51,7 @@ export default function AboutPage() {
             >
               press link
             </a>
-            ) for my friends' company before opting out of the founding engineer role. It didn't feel like the right fit.
+            ) for my friends&apos; company before opting out of the founding engineer role. It didn&apos;t feel like the right fit.
           </p>
 
           <p>
