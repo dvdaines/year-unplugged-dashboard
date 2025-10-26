@@ -25,7 +25,7 @@ export default function AboutPage() {
           <p className="text-ink font-semibold">
             My name is{" "}
             <a
-              href="https://x.com/daviddorg"
+              href="https://davidd.org"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 hover:opacity-80"
