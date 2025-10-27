@@ -49,7 +49,7 @@ export default function Home() {
               href="/about"
               className="text-sm font-semibold text-ink underline underline-offset-4 hover:opacity-80 transition-opacity"
             >
-              About Me / Why I&apos;m Doing This
+              Why I&apos;m Doing This
             </a>
           </div>
 
