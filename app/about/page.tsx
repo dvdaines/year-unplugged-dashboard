@@ -78,7 +78,7 @@ export default function AboutPage() {
 
           <br />
 
-          <p>Finally, years later, I&apos;ve positioned myself to make it happen.</p>
+          <p>Finally, years later, I&apos;ve positioned myself to make it happen: one year, zero screens, hundreds of biomarkers.</p>
 
           <p>
             This isn&apos;t my first public N=1 experiment. I ran a six month microplastics
