@@ -53,7 +53,7 @@ export default function AboutPage() {
             It got so bad, I even built a hardware device to <em>lock up</em> all my devices on a timed basis (
             <a
               className="underline underline-offset-4 hover:opacity-80"
-              href="https:/siliconvault.io"
+              href="https://siliconvault.io"
               target="_blank"
               rel="noopener noreferrer"
             >
