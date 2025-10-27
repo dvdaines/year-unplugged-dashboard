@@ -64,7 +64,7 @@ export default function AboutPage() {
               />
             </div>
 
-            <p>I once put everything away for a week, and my brain felt like it
+            <p>I once locked all my devices up for a week, and my brain felt like it
             <strong> turned back on</strong>. I slept well. I could think again.</p>
 
           <p>
@@ -146,6 +146,9 @@ export default function AboutPage() {
           >
             Research collaboration inquiries
           </a>
+
+          <p className="mt-6 text-sm text-gray-600">Created by <a href="https://davidd.org" className="text-sm font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity">David Daines</a>.</p>
+
         </div>
 
       </section>

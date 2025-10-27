@@ -34,7 +34,7 @@ export default function Home() {
 
           {/* Intro */}
           <div className="text-muted-ink text-base sm:text-lg leading-relaxed mb-6">
-            <strong className="text-ink">Hey, I&apos;m <a href="https://davidd.org" className="underline underline-offset-4 hover:opacity-80">David</a>.</strong>
+            <strong className="text-ink">Hey, I&apos;m David.</strong>
           </div>
 
           {/* Conversational one-liner */}
@@ -96,6 +96,8 @@ export default function Home() {
               Research collaboration inquiries
             </a>
           </div>
+
+          <p className="mt-6 text-sm text-gray-600">Created by <a href="https://davidd.org" className="text-sm font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity">David Daines</a>.</p>
 
           <div className="h-6" />
 
