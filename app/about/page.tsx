@@ -42,7 +42,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I didn't stick with the startup long, but I kept working in tech, and over time, I started to feel like a frog who had been slowly boiled. My
+            I didn&apos;t stick with the startup long, but I kept working in tech, and over time, I started to feel like a frog who had been slowly boiled. My
             brain felt like it wasn&apos;t working like it should be — even though I ate well, worked out, and tried to
             optimize my sleep. My doctor also said I was doing everything right.
           </p>
