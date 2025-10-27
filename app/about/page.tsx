@@ -53,18 +53,18 @@ export default function AboutPage() {
             It got so bad, I even built a hardware device to <em>lock up</em> all my devices on a timed basis (demo below).
           </p>
 
-          <div className="relative w-full" style={{paddingBottom: '56.25%'}}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full shadow-xl"
-                src="https://www.youtube.com/embed/Q_vfB84xvdk"
-                title="Silicon Vault Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full shadow-xl"
+              src="https://www.youtube.com/embed/Q_vfB84xvdk?vq=hd1080"
+              title="Silicon Vault Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
 
-            <p>I once locked all my devices up for a week, and my brain felt like it
+          <p>I once locked all my devices up for a week, and my brain felt like it
             <strong> turned back on</strong>. I slept well. I could think again.</p>
 
           <p>
