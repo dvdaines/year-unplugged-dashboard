@@ -137,7 +137,7 @@ export default function AboutPage() {
         {/* CTA */}
         <div className="mt-12 text-center space-y-4">
           <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-            Target start is Q1, 2026. If you’re a researcher in the SF Bay Area who wants to gather data (in any specialty), let&apos;s talk.'.
+            Target start is Q1, 2026. If you’re a researcher in the SF Bay Area who wants to gather data (in any specialty), let&apos;s talk.
           </p>
 
           <a
