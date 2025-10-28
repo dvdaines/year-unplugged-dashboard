@@ -78,7 +78,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <th scope="row">Data</th>
-                  <td>Open data: 2 months pre (baseline), 12 months during, 2 month post</td>
+                  <td>Open data: 2 months pre (baseline), 12 months during, 2 months post</td>
                 </tr>
               </tbody>
             </table>
