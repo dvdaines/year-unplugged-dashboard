@@ -100,7 +100,7 @@ export default function AboutPage() {
             on screenless living — and releasing <strong>open data</strong> (including two months of baseline) so real
             scientists can investigate further:{' '}
             <a
-              href="https://ouraring.com"
+              href="https://www.whoop.com/us/en/"
               className="underline underline-offset-4 hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,7 +109,7 @@ export default function AboutPage() {
             </a>
             ,{' '}
             <a
-              href="https://superpower.com/biomarkers"
+              href="https://www.functionhealth.com/whats-included"
               className="underline underline-offset-4 hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer"

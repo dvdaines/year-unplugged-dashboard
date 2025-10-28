@@ -39,7 +39,7 @@ export default function Home() {
 
           {/* Conversational one-liner */}
           <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
-            I spend 12 hours per day on a screen. And soon, <strong>I&apos;m going to spend one year with no screens</strong>, sharing <a href="https://ouraring.com" className="underline underline-offset-4 hover:opacity-80">sleep data</a>, 100+ <a href="https://superpower.com/biomarkers" className="underline underline-offset-4 hover:opacity-80">monthly biomarkers</a>, and video
+            I spend 12 hours per day on a screen. And soon, <strong>I&apos;m going to spend one year with no screens</strong>, sharing <a href="https://www.whoop.com/us/en/" className="underline underline-offset-4 hover:opacity-80">sleep data</a>, 100+ <a href="https://www.functionhealth.com/whats-included" className="underline underline-offset-4 hover:opacity-80">monthly biomarkers</a>, and video
             updates on a public dashboard. This project will generate the richest open dataset documenting the health effects of eliminating screens for a prolonged period of time.
           </p>
 
@@ -68,10 +68,10 @@ export default function Home() {
                 <tr>
                   <th scope="row">Measures</th>
                   <td>
-                    <a href="https://superpower.com/biomarkers" className="underline underline-offset-4 hover:opacity-80">
+                    <a href="https://www.functionhealth.com/whats-included" className="underline underline-offset-4 hover:opacity-80">
                       Monthly biomarkers
                     </a>;{' '}
-                    <a href="https://ouraring.com" className="underline underline-offset-4 hover:opacity-80">
+                    <a href="https://www.whoop.com/us/en/" className="underline underline-offset-4 hover:opacity-80">
                       continuous sleep
                     </a>; more, TBD
                   </td>
