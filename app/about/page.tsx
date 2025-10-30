@@ -116,7 +116,7 @@ export default function AboutPage() {
             >
               100+ monthly biomarkers
             </a>
-            , video updates, etc. all shared on a public dashboard.
+            , neuroimaging, video updates, etc. all shared on a public dashboard.
           </p>
 
           <p className="text-ink font-semibold leading-snug">
