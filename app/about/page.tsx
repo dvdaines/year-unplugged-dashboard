@@ -97,7 +97,7 @@ export default function AboutPage() {
 
           <p>
             So now, I&apos;m running what might be the most comprehensive experiment yet
-            on screenless living — and releasing <strong>open data</strong> (including two months of baseline + 1 month after) so real
+            on screenless living — and releasing <strong>open data</strong> (including two months of baseline + two months after) so real
             scientists can investigate further:{' '}
             <a
               href="https://www.whoop.com/us/en/"
