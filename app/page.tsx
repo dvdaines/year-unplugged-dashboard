@@ -73,7 +73,7 @@ export default function Home() {
                     </a>;{' '}
                     <a href="https://www.whoop.com/us/en/" className="underline underline-offset-4 hover:opacity-80">
                       continuous sleep
-                    </a>, neuroimaging; more, TBD
+                    </a>; neuroimaging (various); more, TBD
                   </td>
                 </tr>
                 <tr>
