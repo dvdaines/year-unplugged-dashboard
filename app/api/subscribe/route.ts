@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 3. Create subscriber (V4 uses 'email_address')
-    const subscriberRes = await kitFetch('https://api.kit.com/v4/subscribers', {
+    await kitFetch('https://api.kit.com/v4/subscribers', {
       method: 'POST',
       headers: {
         'X-Kit-Api-Key': apiKey, // V4 auth header
@@ -54,10 +54,11 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ success: true, message: 'Check your inbox to confirm! (check spam folder)' });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Subscribe error:', err);
+    const errorMessage = err instanceof Error ? err.message : 'Unknown error';
     return NextResponse.json(
-      { error: err.message?.includes('Kit API') ? 'Subscription service unavailable' : 'Something went wrong' },
+      { error: errorMessage.includes('Kit API') ? 'Subscription service unavailable' : 'Something went wrong' },
       { status: 500 }
     );
   }
