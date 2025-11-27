@@ -98,3 +98,29 @@ body { font-family: var(--font-sans); }
 
 /* Image hygiene */
 img { max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast; }
+
+/* Shimmer animation for progress bar */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom scrollbar styling for Curator.io feed */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(30, 27, 22, 0.05);
+  border-radius: 4px;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(30, 27, 22, 0.2);
+  border-radius: 4px;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 27, 22, 0.3);
+}

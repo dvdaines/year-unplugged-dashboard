@@ -1,14 +1,22 @@
 // app/page.tsx
-import EmailCapture from './components/email-capture';
+'use client';
+
+import EpisodeSlider from './components/episode-slider';
+import ProgressBar from './components/progress-bar';
+import HealthMetric from './components/health-metric';
+import Script from 'next/script';
 
 export default function Home() {
+  // Start date: July 26, 2025
+  const startDate = new Date('2025-07-26');
+  const totalDays = 365;
+
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      <section className="flex min-h-dvh items-center justify-center px-6 py-16">
-        <div className="w-full max-w-2xl text-center">
-
-          {/* Logo + Wordmark */}
-          <div className="flex items-center justify-center gap-3 mb-5">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Header */}
+        <header className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-4 mb-8">
+          <div className="flex items-center gap-3">
             <img
               src="/yu-mark.svg"
               width={40}
@@ -17,102 +25,128 @@ export default function Home() {
               className="inline-block select-none"
               decoding="async"
             />
-            <h1 className="font-display text-[34px] leading-tight sm:text-[42px] md:text-[46px] tracking-[-0.01em]">
+            <h1 className="font-display text-[34px] leading-tight sm:text-[42px] tracking-[-0.01em] whitespace-nowrap">
               Year Unplugged
             </h1>
           </div>
+          <p className="text-base sm:text-lg text-muted-ink font-medium text-right sm:text-left whitespace-nowrap">
+            <i>One year, zero screens, hundreds of biomarkers</i>
+          </p>
+        </header>
 
-          {/* Profile */}
-          <div className="flex justify-center mb-6">
-            <img
-              src="/profile.jpg"
-              alt="David"
-              width={96}
-              height={96}
-              className="h-24 w-24 rounded-full object-cover ring-2 ring-[rgba(47,42,37,0.25)] shadow-sm"
-              decoding="async"
+        {/* Send a letter box */}
+        <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-xl)] p-4 mb-8">
+          <p className="text-base sm:text-md text-ink">
+            <strong>Send a letter:</strong> PO Box 12345, Salt Lake City, UT 84101
+          </p>
+        </div>
+
+        {/* Main content: Latest episode + Progress/Feed */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Latest Episode - YouTube Video */}
+          <div className="lg:col-span-2">
+            <h2 className="font-display text-2xl mb-4">Latest Episode</h2>
+            <div className="aspect-video bg-panel rounded-[var(--r-xl)] overflow-hidden border border-[rgba(30,27,22,0.08)]">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Wl_LIUhei5E"
+                title="Latest Episode"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Progress Bar + Live Feed */}
+          <div className="space-y-6">
+            {/* Progress Bar */}
+            <div>
+              <h3 className="font-display text-xl mb-5">Progress</h3>
+              <ProgressBar startDate={startDate} totalDays={totalDays} />
+            </div>
+
+            {/* Curator.io Feed */}
+            <div>
+              <h3 className="font-display text-xl mb-3">Posts From My Fax Machine</h3>
+              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-lg)] p-6 min-h-[300px] flex flex-col overflow-hidden lg:max-h-[300px] lg:overflow-y-auto">
+                {/* Curator Widget */}
+                <div id="curator-feed-default-feed-layout">
+                  <a
+                    href="https://curator.io"
+                    target="_blank"
+                    className="crt-logo crt-tag"
+                  >
+                    Powered by Curator.io
+                  </a>
+                </div>
+
+                <Script id="curator-script" strategy="afterInteractive">
+                  {`
+                    (function(){
+                      var i,e,d=document,s="script";
+                      i=d.createElement("script");
+                      i.async=1;
+                      i.charset="UTF-8";
+                      i.src="https://cdn.curator.io/published/47c9d202-b03a-4886-838f-2a6129e33b43.js";
+                      e=d.getElementsByTagName(s)[0];
+                      e.parentNode.insertBefore(i, e);
+                    })();
+                  `}
+                </Script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Health Metrics Section */}
+        <div className="mb-12">
+          <h2 className="font-display text-2xl mb-6">Biomarkers</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <HealthMetric
+              title="Testosterone Level"
+              value={685}
+              unit="ng/dL"
+              change={+12.3}
+              baseline="610 ng/dL"
+            />
+            <HealthMetric
+              title="IQ Score"
+              value={118}
+              unit="Standard score"
+              change={+5.4}
+              baseline="112"
+            />
+            <HealthMetric
+              title="Sleep Quality"
+              value={87}
+              unit="Score (30 Day Avg)"
+              change={+15.2}
+              baseline="75.5"
+            />
+            <HealthMetric
+              title="Pace of Aging"
+              value={0.92}
+              unit="DunedinPACE"
+              change={-8.7}
+              baseline="1.01"
+              lowerIsBetter={true}
             />
           </div>
-
-          {/* Intro */}
-          <div className="text-muted-ink text-base sm:text-lg leading-relaxed mb-6">
-            <strong className="text-ink">Hey, I&apos;m <a className="underline underline-offset-4 hover:opacity-80 transition-opacity" href="https://davidd.org">David</a>.</strong>
+          <div className="flex justify-center">
+            <button className="btn btn-ghost">
+              See All Biomarkers
+            </button>
           </div>
-
-          {/* Conversational one-liner */}
-          <p className="text-base sm:text-lg leading-relaxed text-muted-ink">
-            I spend 12 hours per day on a screen. And soon, <strong>I&apos;m going to spend one year with no screens</strong>, sharing <a href="https://www.whoop.com/us/en/" className="underline underline-offset-4 hover:opacity-80">sleep data</a>, 100+ <a href="https://www.functionhealth.com/whats-included" className="underline underline-offset-4 hover:opacity-80">monthly biomarkers</a>, brain imaging, and video
-            updates on a public dashboard. This project will generate the richest open dataset documenting the health effects of eliminating screens for a prolonged period of time.
-          </p>
-
-          {/* Email Capture */}
-          <div className="mt-6">
-            <p className="text-muted-ink text-base sm:text-lg leading-relaxed mb-2">
-              <strong>Get Experiment Updates</strong>
-            </p>
-            <EmailCapture />
-          </div>
-
-          {/* About Me link */}
-          <div className="mt-5">
-            <a
-              href="/about"
-              className="text-sm font-semibold text-ink underline underline-offset-4 hover:opacity-80 transition-opacity"
-            >
-              About Me & Why I&apos;m Doing This
-            </a>
-          </div>
-
-          {/* Simple details table */}
-          <div className="mt-6 flex justify-center">
-            <table className="details-table">
-              <tbody>
-                <tr>
-                  <th scope="row">Start</th>
-                  <td>Q1, 2026</td>
-                </tr>
-                <tr>
-                  <th scope="row">Design</th>
-                  <td>Single-participant, longitudinal</td>
-                </tr>
-                <tr>
-                  <th scope="row">Measures</th>
-                  <td>
-                    <a href="https://www.functionhealth.com/whats-included" className="underline underline-offset-4 hover:opacity-80">
-                      Monthly biomarkers
-                    </a>;{' '}
-                    <a href="https://www.whoop.com/us/en/" className="underline underline-offset-4 hover:opacity-80">
-                      continuous sleep
-                    </a>; neuroimaging (various); more, TBD
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Data</th>
-                  <td>Open data: 2 months pre (baseline), 12 months during, 2 months post</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* CTAs */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <p className="text-muted-ink text-base sm:text-lg leading-relaxed">
-            Target start is Q1, 2026. If you’re a researcher in the SF Bay Area who wants to gather data (in any specialty), let&apos;s talk.
-            </p>
-            <a
-              href="mailto:david@davidd.org?subject=Year%20Unplugged%20%E2%80%94%20Research%20Collaboration"
-              className="btn btn-primary"
-            >
-              Research collaboration inquiries
-            </a>
-          </div>
-
-          {/* <p className="mt-6 text-sm text-gray-600">Created by <a href="https://davidd.org" className="text-sm font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity">David Daines</a>.</p> */}
-
-          <div className="h-6" />
-
         </div>
-      </section>
+
+        {/* Past Episodes Slider */}
+        <div className="mb-12">
+          <h2 className="font-display text-2xl mb-6">Past Episodes</h2>
+          <EpisodeSlider />
+        </div>
+      </div>
     </main>
   );
 }
