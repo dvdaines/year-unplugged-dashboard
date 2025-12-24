@@ -162,7 +162,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-2 pt-0 min-h-[292px] lg:max-h-[292px] flex flex-col overflow-hidden relative">
+              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-2 pt-0 min-h-[265px] lg:max-h-[265px] flex flex-col overflow-hidden relative">
                 <div
                   ref={scrollContainerRef}
                   className="flex-1 overflow-y-auto curator-scrollable p-2 overscroll-contain"
