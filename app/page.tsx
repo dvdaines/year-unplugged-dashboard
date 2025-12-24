@@ -203,7 +203,7 @@ export default function Home() {
 
         {/* Past Videos */}
         <div className="mb-12">
-          <h2 className="font-display text-2xl mb-2">Past Videos</h2>
+          <h2 className="font-display text-2xl mb-2">All Videos</h2>
           <EpisodeSlider />
         </div>
 
