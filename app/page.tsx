@@ -204,7 +204,6 @@ export default function Home() {
         {/* Past Videos */}
         <div className="mb-12">
           <h2 className="font-display text-2xl mb-2">Past Videos</h2>
-          <p className="text-sm text-ink mb-6">Video updates will be released regularly</p>
           <EpisodeSlider />
         </div>
 
