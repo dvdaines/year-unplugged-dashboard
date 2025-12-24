@@ -116,7 +116,7 @@ export default function Home() {
             {/* Send Mail */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <h2 className="font-display text-xl">Send mail</h2>
+                <h2 className="font-display text-xl">Send Mail</h2>
                 <p className="text-sm text-ink">May be read on video</p>
               </div>
 
