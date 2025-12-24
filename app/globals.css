@@ -16,6 +16,18 @@
   --font-display: serif;
   --font-sans: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* ===== Global UI scale =====
+     Desktop feels "too big" → scale root rems down.
+     Tweak 0.82–0.9 to taste. */
+  --ui-scale: 1;
+}
+
+/* Scale down only on desktop-ish widths */
+@media (min-width: 768px) {
+  :root {
+    --ui-scale: 0.85;
+  }
 }
 
 @theme inline {
@@ -33,6 +45,18 @@
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 }
+
+/* Base sizing + hygiene */
+html {
+  /* Drive the whole site’s rem scale (Tailwind mostly uses rems) */
+  font-size: calc(16px * var(--ui-scale));
+
+  /* Prevent iOS/Safari from "helpfully" resizing text */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
 
 html, body { background: var(--cream); color: var(--ink); }
 body { font-family: var(--font-sans); }
@@ -101,26 +125,34 @@ img { max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast;
 
 /* Shimmer animation for progress bar */
 @keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-/* Custom scrollbar styling for Curator.io feed */
-.overflow-y-auto::-webkit-scrollbar {
-  width: 8px;
+/* Custom scrollbar styling for Curator.io feed - highly visible */
+.curator-scrollable::-webkit-scrollbar {
+  width: 12px;
 }
-.overflow-y-auto::-webkit-scrollbar-track {
-  background: rgba(30, 27, 22, 0.05);
-  border-radius: 4px;
+.curator-scrollable::-webkit-scrollbar-track {
+  background: rgba(30, 27, 22, 0.12);
+  border-radius: 6px;
+  margin: 4px;
 }
-.overflow-y-auto::-webkit-scrollbar-thumb {
-  background: rgba(30, 27, 22, 0.2);
-  border-radius: 4px;
+.curator-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(30, 27, 22, 0.4);
+  border-radius: 6px;
+  border: 2px solid var(--panel);
+  min-height: 40px;
 }
-.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: rgba(30, 27, 22, 0.3);
+.curator-scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 27, 22, 0.5);
+}
+.curator-scrollable::-webkit-scrollbar-thumb:active {
+  background: rgba(30, 27, 22, 0.6);
+}
+
+/* Firefox scrollbar */
+.curator-scrollable {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(30, 27, 22, 0.4) rgba(30, 27, 22, 0.12);
 }

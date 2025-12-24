@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 
 // Placeholder episode data - replace with real data later
 const episodes = [
-  { id: 1, title: 'Episode 1', thumbnail: '/thumbnail.PNG' },
-  { id: 2, title: 'Episode 2', thumbnail: '/thumbnail.PNG' },
-  { id: 3, title: 'Episode 3', thumbnail: '/thumbnail.PNG' },
-  { id: 4, title: 'Episode 4', thumbnail: '/thumbnail.PNG' },
-  { id: 5, title: 'Episode 5', thumbnail: '/thumbnail.PNG' },
-  { id: 6, title: 'Episode 6', thumbnail: '/thumbnail.PNG' },
+  { id: 1, title: 'Intro: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 2, title: 'Month 1: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 3, title: 'Month 2: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 4, title: 'Month 3: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 5, title: 'Month 4: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 6, title: 'Month 5: Pending', thumbnail: '/thumbnail.PNG' },
 ];
 
 export default function EpisodeSlider() {
@@ -18,8 +18,8 @@ export default function EpisodeSlider() {
   // Responsive items per view
   const getItemsPerView = () => {
     if (typeof window === 'undefined') return 4;
-    if (window.innerWidth >= 768) return 4; // md and up
-    return 2; // mobile
+    if (window.innerWidth >= 1024) return 4; // lg and up (desktop)
+    return 2; // tablet and mobile
   };
   const [itemsPerView, setItemsPerView] = useState(4);
 
@@ -54,7 +54,7 @@ export default function EpisodeSlider() {
       <button
         onClick={goPrevious}
         disabled={currentIndex === 0}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 bg-panel border border-[rgba(30,27,22,0.08)] rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 bg-panel border border-[rgba(30,27,22,0.08)] rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-sm cursor-pointer"
         aria-label="Previous episodes"
       >
         <svg
@@ -77,7 +77,7 @@ export default function EpisodeSlider() {
       <button
         onClick={goNext}
         disabled={currentIndex >= maxIndex}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 bg-panel border border-[rgba(30,27,22,0.08)] rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 bg-panel border border-[rgba(30,27,22,0.08)] rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-sm cursor-pointer"
         aria-label="Next episodes"
       >
         <svg
@@ -98,7 +98,7 @@ export default function EpisodeSlider() {
       </button>
 
       {/* Episodes Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 sm:px-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-6 sm:px-8">
         {visibleEpisodes.map((episode) => (
           <div
             key={episode.id}
@@ -120,4 +120,3 @@ export default function EpisodeSlider() {
     </div>
   );
 }
-

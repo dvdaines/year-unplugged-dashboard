@@ -1,57 +1,66 @@
 // app/page.tsx
 'use client';
 
+import { useState, useRef, useEffect } from 'react';
+import Script from 'next/script';
 import EpisodeSlider from './components/episode-slider';
 import ProgressBar from './components/progress-bar';
 import HealthMetric from './components/health-metric';
-import Script from 'next/script';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Link from 'next/link';
 
 export default function Home() {
-  // Start date: July 26, 2025
-  const startDate = new Date('2025-07-26');
+  // Start date: Dec 23, 2025
+  const startDate = new Date('2025-12-23');
   const totalDays = 365;
+
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [showReadMore, setShowReadMore] = useState(false);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const checkScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5;
+      if (isAtBottom && !showReadMore) setShowReadMore(true);
+    };
+
+    checkScroll();
+    container.addEventListener('scroll', checkScroll);
+
+    const observer = new MutationObserver(checkScroll);
+    observer.observe(container, { childList: true, subtree: true });
+
+    return () => {
+      container.removeEventListener('scroll', checkScroll);
+      observer.disconnect();
+    };
+  }, [showReadMore]);
 
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        {/* Header */}
-        <header className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-4 mb-8">
-          <div className="flex items-center gap-3">
-            <img
-              src="/yu-mark.svg"
-              width={40}
-              height={40}
-              alt="Year Unplugged logo"
-              className="inline-block select-none"
-              decoding="async"
-            />
-            <h1 className="font-display text-[34px] leading-tight sm:text-[42px] tracking-[-0.01em] whitespace-nowrap">
-              Year Unplugged
-            </h1>
-          </div>
-          <p className="text-base sm:text-lg text-muted-ink font-medium text-right sm:text-left whitespace-nowrap">
-            <i>One year, zero screens, hundreds of biomarkers</i>
-          </p>
-        </header>
+      {/* Elfsight Twitter Feed | Untitled Twitter Feed */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="afterInteractive" />
 
-        {/* Send a letter box */}
-        <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-xl)] p-4 mb-8">
-          <p className="text-base sm:text-md text-ink">
-            <strong>Send a letter:</strong> PO Box 12345, Salt Lake City, UT 84101
-          </p>
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <Header />
+
+        <div className="mb-8">
+          <ProgressBar startDate={startDate} totalDays={totalDays} />
         </div>
 
-        {/* Main content: Latest episode + Progress/Feed */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Latest Episode - YouTube Video */}
           <div className="lg:col-span-2">
-            <h2 className="font-display text-2xl mb-4">Latest Episode</h2>
+            <h2 className="font-display text-2xl mb-4">Latest Video</h2>
             <div className="aspect-video bg-panel rounded-[var(--r-xl)] overflow-hidden border border-[rgba(30,27,22,0.08)]">
               <iframe
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/Wl_LIUhei5E"
-                title="Latest Episode"
+                title="Latest Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
@@ -59,50 +68,60 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Progress Bar + Live Feed */}
           <div className="space-y-6">
-            {/* Progress Bar */}
             <div>
-              <h3 className="font-display text-xl mb-5">Progress</h3>
-              <ProgressBar startDate={startDate} totalDays={totalDays} />
+              <div className="flex items-center gap-3 mb-3">
+                <h3 className="font-display text-xl">Send mail</h3>
+                <p className="text-base text-sm text-ink">May be read on video</p>
+              </div>
+              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-xl)] p-4">
+                <p className="text-base sm:text-md text-ink">
+                  P.O. Box 12345, San Francisco, CA 94122
+                </p>
+              </div>
             </div>
 
-            {/* Curator.io Feed */}
             <div>
-              <h3 className="font-display text-xl mb-3">Posts From My Fax Machine</h3>
-              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-lg)] p-6 min-h-[300px] flex flex-col overflow-hidden lg:max-h-[300px] lg:overflow-y-auto">
-                {/* Curator Widget */}
-                <div id="curator-feed-default-feed-layout">
+              {/* Change 1: "Posted by screenless phone" inline next to Live Updates */}
+              <div className="flex items-center gap-3 mb-3">
+                <h3 className="font-display text-xl">Live Updates</h3>
+                <p className="text-base text-sm text-ink">
+                  Posted by{' '}
                   <a
-                    href="https://curator.io"
+                    className="italic underline"
+                    href="https://x.com/daviddorg/status/2003251001411948770"
                     target="_blank"
-                    className="crt-logo crt-tag"
+                    rel="noopener noreferrer"
                   >
-                    Powered by Curator.io
+                    screenless phone
                   </a>
+                </p>
+              </div>
+
+              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-lg)] p-2 pt-0 min-h-[250px] lg:max-h-[265px] flex flex-col overflow-hidden relative">
+                <div
+                  ref={scrollContainerRef}
+                  className="flex-1 overflow-y-auto curator-scrollable p-2 overscroll-contain"
+                >
+                  <div
+                    className="elfsight-app-cda03ab5-0760-46d9-93db-f31549ed0875"
+                    data-elfsight-app-lazy
+                  />
                 </div>
 
-                <Script id="curator-script" strategy="afterInteractive">
-                  {`
-                    (function(){
-                      var i,e,d=document,s="script";
-                      i=d.createElement("script");
-                      i.async=1;
-                      i.charset="UTF-8";
-                      i.src="https://cdn.curator.io/published/47c9d202-b03a-4886-838f-2a6129e33b43.js";
-                      e=d.getElementsByTagName(s)[0];
-                      e.parentNode.insertBefore(i, e);
-                    })();
-                  `}
-                </Script>
+                <div className="hidden lg:block absolute bottom-0 left-0 right-0 h-20 pointer-events-none bg-gradient-to-t from-panel via-panel/80 to-transparent z-10 rounded-b-[var(--r-lg)]" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Health Metrics Section */}
+        {/* Health Metrics */}
         <div className="mb-12">
-          <h2 className="font-display text-2xl mb-6">Biomarkers</h2>
+          <h2 className="font-display text-2xl mb-2">Featured Biomarkers</h2>
+
+          {/* Change 2: note below heading */}
+          <p className="text-base text-sm text-ink mb-6">No data yet, for illustrative purposes</p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <HealthMetric
               title="Testosterone Level"
@@ -112,11 +131,11 @@ export default function Home() {
               baseline="610 ng/dL"
             />
             <HealthMetric
-              title="IQ Score"
-              value={118}
-              unit="Standard score"
-              change={+5.4}
-              baseline="112"
+              title="Working Memory"
+              value={97}
+              unit="Percentile"
+              change={94}
+              baseline="50%"
             />
             <HealthMetric
               title="Sleep Quality"
@@ -126,26 +145,34 @@ export default function Home() {
               baseline="75.5"
             />
             <HealthMetric
-              title="Pace of Aging"
-              value={0.92}
-              unit="DunedinPACE"
-              change={-8.7}
-              baseline="1.01"
-              lowerIsBetter={true}
+              title="Melatonin (Overnight)"
+              value={62}
+              unit="pg/mL"
+              change={+18.1}
+              baseline="52.5 pg/mL"
             />
           </div>
+
           <div className="flex justify-center">
-            <button className="btn btn-ghost">
-              See All Biomarkers
-            </button>
+            <Link
+              href="#"
+              className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer"
+            >
+              See All 100+ Biomarkers
+            </Link>
           </div>
         </div>
 
-        {/* Past Episodes Slider */}
         <div className="mb-12">
-          <h2 className="font-display text-2xl mb-6">Past Episodes</h2>
+          <h2 className="font-display text-2xl mb-2">Past Videos</h2>
+
+          {/* Change 3: note below Past Videos */}
+          <p className="text-base text-sm text-ink mb-6">Video updates will be released regularly</p>
+
           <EpisodeSlider />
         </div>
+
+        <Footer />
       </div>
     </main>
   );
