@@ -115,7 +115,7 @@ export default function Home() {
           <div className="space-y-6">
             {/* Send Mail */}
             <div>
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-4">
                 <h2 className="font-display text-xl">Send mail</h2>
                 <p className="text-sm text-ink">May be read on video</p>
               </div>
