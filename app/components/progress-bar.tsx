@@ -362,9 +362,6 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
                               <span className="text-sm text-muted-ink font-sans">({phase.days} days)</span>
                             </h4>
                             {/* Optional date line (you already compute phaseDates) */}
-                            <p className="text-sm text-muted-ink">
-                              {phaseDates[index].start} → {phaseDates[index].end}
-                            </p>
                           </div>
                           <p className="text-sm text-ink mt-2">{phase.description}</p>
                         </div>

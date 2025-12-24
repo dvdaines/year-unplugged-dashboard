@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 
 // Placeholder episode data - replace with real data later
 const episodes = [
-  { id: 1, title: 'Intro: Pending', thumbnail: '/thumbnail.PNG' },
-  { id: 2, title: 'Month 1: Pending', thumbnail: '/thumbnail.PNG' },
-  { id: 3, title: 'Month 2: Pending', thumbnail: '/thumbnail.PNG' },
-  { id: 4, title: 'Month 3: Pending', thumbnail: '/thumbnail.PNG' },
-  { id: 5, title: 'Month 4: Pending', thumbnail: '/thumbnail.PNG' },
-  { id: 6, title: 'Month 5: Pending', thumbnail: '/thumbnail.PNG' },
+  { id: 1, title: 'Intro: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 2, title: 'Month 1: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 3, title: 'Month 2: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 4, title: 'Month 3: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 5, title: 'Month 4: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 6, title: 'Month 5: TBD', thumbnail: '/thumbnail.PNG' },
 ];
 
 export default function EpisodeSlider() {
