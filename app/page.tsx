@@ -105,7 +105,7 @@ export default function Home() {
           <div className="lg:col-span-2">
             <LiteYouTube
               id="Wl_LIUhei5E"
-              title="One Year Screen-Free. More Health Data Than Most Clinical Trials."
+              title="One year screen-free. More health data than most clinical trials."
               subtitle="Setting the stage"
             />
 
