@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Fraunces, Inter } from "next/font/google";
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import "./globals.css";
 
 const display = Fraunces({
@@ -19,7 +20,7 @@ const THUMBNAIL = "/thumbnail.PNG";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
-  title: "Year Unplugged, an Experiment",
+  title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
   description: "1 year, 0 screens, 100s of biomarkers",
   manifest: "/site.webmanifest",
   icons: {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   appleWebApp: {
-    title: "Year Unplugged, an Experiment",
+    title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
     capable: true,
     statusBarStyle: "default",
   },
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://yearunplugged.com",
-    title: "Year Unplugged, an Experiment",
+    title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
     description: "1 year, 0 screens, 100s of biomarkers",
     images: [{ url: THUMBNAIL, width: 1200, height: 630, alt: "Year Unplugged" }],
   },
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@daviddorg",
     creator: "@daviddorg",
-    title: "Year Unplugged, an Experiment",
+    title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
     description: "1 year, 0 screens, 100s of biomarkers",
     images: [THUMBNAIL],
   },

@@ -156,3 +156,39 @@ img { max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast;
   scrollbar-width: auto;
   scrollbar-color: rgba(30, 27, 22, 0.4) rgba(30, 27, 22, 0.12);
 }
+
+/* ===== Lite YouTube brand alignment ===== */
+
+/* Hide YouTube's default play button */
+.yt-lite .lty-playbtn {
+  display: none !important;
+}
+
+/* Calm the thumbnail a touch */
+.yt-lite img {
+  filter: saturate(0.95) contrast(0.95);
+  transition: transform 240ms ease;
+}
+
+/* Subtle zoom on hover (editorial, not "CTA") */
+.group:hover .yt-lite img {
+  transform: scale(1.01);
+}
+
+/* Prevent default focus ring from clashing */
+.yt-lite:focus-visible {
+  outline: none;
+}
+
+.yt-lite.lyt-activated ~ .lite-play-overlay,
+.yt-lite.lyt-activated + .lite-play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide custom play button once lite-youtube activates */
+.yt-lite.lyt-activated + .lite-play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+

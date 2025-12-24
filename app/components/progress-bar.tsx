@@ -30,7 +30,7 @@ const PHASES: Phase[] = [
     vividColor: '#f97316',
     mutedColor: '#fdba74',
     description:
-      'Record two months of baseline data including first set of neuroimaging, audiology exam, vision exam, 100+ blood markers, and cognitive tests. Publish kickoff video.',
+      'Record two months of baseline data including first set of neuroimaging, audiology exam, vision exam, 100+ blood markers, sleep data, and cognitive tests. Publish kickoff video.',
   },
   {
     name: 'No Screens',
@@ -199,7 +199,7 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
     <div>
       <h2 className="font-display text-2xl mb-5">Current Phase: {currentPhaseName}</h2>
 
-      <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-lg)] p-4">
+      <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-4">
         <div className="w-full bg-[rgba(30,27,22,0.1)] rounded-full h-4 mb-2 overflow-hidden relative">
           {/* Background: All phases with muted colors */}
           <div className="absolute inset-0 flex">
@@ -290,7 +290,7 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
           <div className="relative flex min-h-dvh items-center justify-center p-4 sm:p-6">
             {/* ✅ Panel becomes a bounded "sheet" that can scroll internally */}
             <div
-              className="w-full max-w-2xl bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-xl)] shadow-sm overflow-hidden max-h-[85dvh] sm:max-h-[80vh] flex flex-col"
+              className="w-full max-w-2xl bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg shadow-sm overflow-hidden max-h-[85dvh] sm:max-h-[80vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header stays fixed */}
@@ -298,12 +298,12 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-display text-2xl">Experiment Timeline</h3>
-                    <p className="text-sm text-muted-ink mt-1">Starting in early 2026</p>
+                    <p className="text-sm text-muted-ink mt-1">Baseline period starting in early 2026</p>
                   </div>
 
                   <button
                     onClick={() => setIsModalOpen(false)}
-                    className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer text-sm px-3 py-1.5 rounded-[var(--r-lg)]"
+                    className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer text-sm px-3 py-1.5 rounded-lg"
                   >
                     Close
                   </button>
@@ -348,7 +348,7 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
                   {PHASES.map((phase, index) => (
                     <div
                       key={index}
-                      className="rounded-[var(--r-lg)] border border-[rgba(30,27,22,0.08)] bg-cream/40 p-4"
+                      className="rounded-lg border border-[rgba(30,27,22,0.08)] bg-cream/40 p-4"
                     >
                       <div className="flex items-start gap-3">
                         <div

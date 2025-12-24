@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
@@ -9,6 +8,8 @@ import HealthMetric from './components/health-metric';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
+import { Copy, Check } from 'lucide-react';
+import LiteYouTube from './components/lite-youtube';
 
 export default function Home() {
   // Start date: Dec 23, 2025
@@ -17,6 +18,53 @@ export default function Home() {
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showReadMore, setShowReadMore] = useState(false);
+
+  // PO Box copy state
+  const PO_BOX_ADDRESS = 'P.O. Box 12345, San Francisco, CA 94122';
+  const [copied, setCopied] = useState(false);
+
+  const copyAddress = async () => {
+    const text = PO_BOX_ADDRESS;
+  
+    // 1) Modern clipboard API (works in secure contexts + allowed permissions)
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+        return;
+      }
+    } catch (err) {
+      // fall through to legacy method
+      console.warn('navigator.clipboard failed, falling back', err);
+    }
+  
+    // 2) Legacy fallback (works basically everywhere)
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '0';
+      ta.style.left = '0';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+  
+      ta.focus();
+      ta.select();
+  
+      const ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+  
+      if (!ok) throw new Error('execCommand returned false');
+  
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (err) {
+      console.error('Copy failed (all methods)', err);
+    }
+  };
+  
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -42,7 +90,7 @@ export default function Home() {
 
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      {/* Elfsight Twitter Feed | Untitled Twitter Feed */}
+      {/* Elfsight Twitter Feed */}
       <Script src="https://elfsightcdn.com/platform.js" strategy="afterInteractive" />
 
       <div className="max-w-7xl mx-auto px-6 py-8">
@@ -53,39 +101,55 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Latest Video */}
           <div className="lg:col-span-2">
-            <h2 className="font-display text-2xl mb-4">Latest Video</h2>
-            <div className="aspect-video bg-panel rounded-[var(--r-xl)] overflow-hidden border border-[rgba(30,27,22,0.08)]">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/Wl_LIUhei5E"
-                title="Latest Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+            <LiteYouTube
+              id="Wl_LIUhei5E"
+              title="Introduction: Why spend a year without screens?"
+              subtitle="Setting the stage"
+            />
+
           </div>
 
+          {/* Right Column */}
           <div className="space-y-6">
+            {/* Send Mail */}
             <div>
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-4 lg:mb-8">
                 <h3 className="font-display text-xl">Send mail</h3>
-                <p className="text-base text-sm text-ink">May be read on video</p>
+                <p className="text-sm text-ink">May be read on video</p>
               </div>
-              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-xl)] p-4">
-                <p className="text-base sm:text-md text-ink">
-                  P.O. Box 12345, San Francisco, CA 94122
-                </p>
+
+              <div
+                onClick={copyAddress}
+                role="button"
+                aria-label="Copy mailing address"
+                className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-4 cursor-pointer hover:bg-[rgba(237,230,218,0.8)] transition-colors select-none flex items-start justify-between gap-3"
+              >
+                <div>
+                  <p className="text-base sm:text-md text-ink">
+                    {PO_BOX_ADDRESS}
+                  </p>
+                  <p className="text-xs text-muted-ink mt-1">
+                    {copied ? 'Copied to clipboard' : 'Click to copy'}
+                  </p>
+                </div>
+
+                <div className="mt-1 text-muted-ink">
+                  {copied ? (
+                    <Check size={18} className="text-ink" />
+                  ) : (
+                    <Copy size={18} />
+                  )}
+                </div>
               </div>
             </div>
 
+            {/* Live Updates */}
             <div>
-              {/* Change 1: "Posted by screenless phone" inline next to Live Updates */}
               <div className="flex items-center gap-3 mb-3">
                 <h3 className="font-display text-xl">Live Updates</h3>
-                <p className="text-base text-sm text-ink">
+                <p className="text-sm text-ink">
                   Posted by{' '}
                   <a
                     className="italic underline"
@@ -98,7 +162,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-[var(--r-lg)] p-2 pt-0 min-h-[290px] lg:max-h-[290px] flex flex-col overflow-hidden relative">
+              <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-2 pt-0 min-h-[265px] lg:max-h-[265px] flex flex-col overflow-hidden relative">
                 <div
                   ref={scrollContainerRef}
                   className="flex-1 overflow-y-auto curator-scrollable p-2 overscroll-contain"
@@ -109,7 +173,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="hidden lg:block absolute bottom-0 left-0 right-0 h-20 pointer-events-none bg-gradient-to-t from-panel via-panel/80 to-transparent z-10 rounded-b-[var(--r-lg)]" />
+                <div className="hidden lg:block absolute bottom-0 left-0 right-0 h-20 pointer-events-none bg-gradient-to-t from-panel via-panel/80 to-transparent z-10 rounded-b-lg" />
               </div>
             </div>
           </div>
@@ -118,57 +182,29 @@ export default function Home() {
         {/* Health Metrics */}
         <div className="mb-12">
           <h2 className="font-display text-2xl mb-2">Featured Biomarkers</h2>
-
-          {/* Change 2: note below heading */}
-          <p className="text-base text-sm text-ink mb-6">No data yet, for illustrative purposes</p>
+          <p className="text-sm text-ink mb-6">No data yet, for illustrative purposes</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <HealthMetric
-              title="Testosterone Level"
-              value={685}
-              unit="ng/dL"
-              change={+12.3}
-              baseline="610 ng/dL"
-            />
-            <HealthMetric
-              title="Working Memory"
-              value={97}
-              unit="Percentile"
-              change={94}
-              baseline="50%"
-            />
-            <HealthMetric
-              title="Sleep Quality"
-              value={87}
-              unit="Score (30 Day Avg)"
-              change={+15.2}
-              baseline="75.5"
-            />
-            <HealthMetric
-              title="Melatonin (Overnight)"
-              value={62}
-              unit="pg/mL"
-              change={+18.1}
-              baseline="52.5 pg/mL"
-            />
+            <HealthMetric title="Testosterone Level" value={685} unit="ng/dL" change={+12.3} baseline="610 ng/dL" />
+            <HealthMetric title="Working Memory" value={97} unit="Percentile" change={94} baseline="50" />
+            <HealthMetric title="Sleep Quality" value={87} unit="Score (30 Day Avg)" change={+15.2} baseline="75.5" />
+            <HealthMetric title="Melatonin (Overnight)" value={62} unit="pg/mL" change={+18.1} baseline="52.5 pg/mL" />
           </div>
 
           <div className="flex justify-center">
             <Link
               href="#"
-              className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] flex items-center justify-center hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer"
+              className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm"
             >
               See All 100+ Biomarkers
             </Link>
           </div>
         </div>
 
+        {/* Past Videos */}
         <div className="mb-12">
           <h2 className="font-display text-2xl mb-2">Past Videos</h2>
-
-          {/* Change 3: note below Past Videos */}
-          <p className="text-base text-sm text-ink mb-6">Video updates will be released regularly</p>
-
+          <p className="text-sm text-ink mb-6">Video updates will be released regularly</p>
           <EpisodeSlider />
         </div>
 
