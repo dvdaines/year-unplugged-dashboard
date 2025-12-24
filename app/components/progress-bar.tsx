@@ -46,7 +46,7 @@ const PHASES: Phase[] = [
     vividColor: '#3b82f6',
     mutedColor: '#93c5fd',
     description:
-      'Continue gathering data post-experiment to see what shifts as screens are reintroduced. Continue with video updates.',
+      'Final neuroimaging. Continue gathering data post-experiment to see what shifts as screens are reintroduced. Continue with video updates.',
   },
 ];
 

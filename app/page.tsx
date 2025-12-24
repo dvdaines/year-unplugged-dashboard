@@ -208,7 +208,7 @@ export default function Home() {
           <EpisodeSlider />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </main>
   );
