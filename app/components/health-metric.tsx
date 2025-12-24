@@ -54,7 +54,7 @@ export default function HealthMetric({
 
         {baseline !== undefined && (
           <p className="text-[11px] sm:text-xs text-muted-ink leading-none truncate">
-            <span className="hidden sm:inline">Baseline: </span>
+            <span className="inline">Baseline: </span>
             {baseline}
           </p>
         )}
