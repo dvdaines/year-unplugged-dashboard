@@ -20,7 +20,7 @@ export default function LiteYouTube({
     <div className="space-y-3">
       {/* Title */}
       <div>
-        <h2 className="font-display text-2xl">Latest Video: {title}</h2>
+        <h2 className="font-display text-xl">Latest Video: {title}</h2>
       </div>
 
       {/* Video */}
