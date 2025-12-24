@@ -5,12 +5,22 @@ import { useState, useEffect, useMemo } from 'react';
 
 // Placeholder episode data - replace with real data later
 const episodes = [
-  { id: 1, title: 'Intro: TBD', thumbnail: '/thumbnail.PNG' },
-  { id: 2, title: 'Month 1: TBD', thumbnail: '/thumbnail.PNG' },
-  { id: 3, title: 'Month 2: TBD', thumbnail: '/thumbnail.PNG' },
-  { id: 4, title: 'Month 3: TBD', thumbnail: '/thumbnail.PNG' },
-  { id: 5, title: 'Month 4: TBD', thumbnail: '/thumbnail.PNG' },
-  { id: 6, title: 'Month 5: TBD', thumbnail: '/thumbnail.PNG' },
+  { id: 1, title: 'Baseline I', thumbnail: '/video-placeholder.png' },
+  { id: 2, title: 'Baeline II', thumbnail: '/video-placeholder.png' },
+  { id: 3, title: 'Month 1', thumbnail: '/video-placeholder.png' },
+  { id: 4, title: 'Month 2', thumbnail: '/video-placeholder.png' },
+  { id: 5, title: 'Month 3', thumbnail: '/video-placeholder.png' },
+  { id: 6, title: 'Month 4', thumbnail: '/video-placeholder.png' },
+  { id: 7, title: 'Month 5', thumbnail: '/video-placeholder.png' },
+  { id: 8, title: 'Month 6', thumbnail: '/video-placeholder.png' },
+  { id: 9, title: 'Month 7', thumbnail: '/video-placeholder.png' },
+  { id: 10, title: 'Month 8', thumbnail: '/video-placeholder.png' },
+  { id: 11, title: 'Month 9', thumbnail: '/video-placeholder.png' },
+  { id: 12, title: 'Month 10', thumbnail: '/video-placeholder.png' },
+  { id: 13, title: 'Month 11', thumbnail: '/video-placeholder.png' },
+  { id: 14, title: 'Month 12', thumbnail: '/video-placeholder.png' },
+  { id: 15, title: 'Reintroduction I', thumbnail: '/video-placeholder.png' },
+  { id: 16, title: 'Reintroduction II', thumbnail: '/video-placeholder.png' },
 ];
 
 export default function EpisodeSlider() {
