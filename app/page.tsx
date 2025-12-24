@@ -104,9 +104,9 @@ export default function Home() {
           {/* Latest Video */}
           <div className="lg:col-span-2">
             <LiteYouTube
-              id="Wl_LIUhei5E"
-              title="One year screen-free. More health data than most clinical trials."
-              subtitle="Setting the stage"
+              id="lA2gLhRkO-0"
+              title="Coming Soon"
+              subtitle="All in good time"
             />
 
           </div>
