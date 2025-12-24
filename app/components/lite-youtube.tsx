@@ -3,6 +3,7 @@
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { Play } from 'lucide-react';
 
 interface LiteYouTubeProps {
   id: string;
@@ -19,8 +20,7 @@ export default function LiteYouTube({
     <div className="space-y-3">
       {/* Title */}
       <div>
-        <h3 className="font-display text-xl leading-snug">{title}</h3>
-        <p className="text-sm text-muted-ink">{subtitle}</p>
+        <h2 className="font-display text-xl leading-snug">Latest Video: {title}</h2>
       </div>
 
       {/* Video */}
@@ -34,8 +34,13 @@ export default function LiteYouTube({
 
         {/* Custom play overlay */}
         <div className="lite-play-overlay pointer-events-none absolute inset-0 flex items-center justify-center transition-opacity duration-200">
-          <div className="btn btn-ghost text-sm backdrop-blur-sm">
-            ▶ Play Video
+          <div className="btn btn-ghost text-sm backdrop-blur-sm flex items-center gap-2">
+            <Play
+              size={16}
+              strokeWidth={2.25}
+              className="text-ink"
+            />
+            <span>Play Video</span>
           </div>
         </div>
 

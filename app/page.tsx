@@ -105,7 +105,7 @@ export default function Home() {
           <div className="lg:col-span-2">
             <LiteYouTube
               id="Wl_LIUhei5E"
-              title="Introduction: Why spend a year without screens?"
+              title="Why spend a year without screens?"
               subtitle="Setting the stage"
             />
 
@@ -116,7 +116,7 @@ export default function Home() {
             {/* Send Mail */}
             <div>
               <div className="flex items-center gap-3 mb-4 lg:mb-8">
-                <h3 className="font-display text-xl">Send mail</h3>
+                <h2 className="font-display text-xl">Send mail</h2>
                 <p className="text-sm text-ink">May be read on video</p>
               </div>
 
