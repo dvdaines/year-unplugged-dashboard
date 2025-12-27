@@ -10,14 +10,56 @@ async function kitFetch(input: string, init?: RequestInit) {
   return res.json();
 }
 
+// Verify Turnstile token
+async function verifyTurnstileToken(token: string, remoteip?: string): Promise<boolean> {
+  const secretKey = process.env.TURNSTILE_SECRET_KEY;
+  
+  if (!secretKey) {
+    console.error('TURNSTILE_SECRET_KEY not configured');
+    return false;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('secret', secretKey);
+    formData.append('response', token);
+    if (remoteip) {
+      formData.append('remoteip', remoteip);
+    }
+
+    const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: formData,
+    });
+
+    const result = await response.json();
+    return result.success === true;
+  } catch (error) {
+    console.error('Turnstile verification error:', error);
+    return false;
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     // 1. Parse & validate
     const body = await req.json();
-    const { email } = body; // Client sends 'email'
+    const { email, turnstileToken } = body;
 
     if (!email || typeof email !== 'string' || !email.includes('@')) {
       return NextResponse.json({ error: 'A valid email address is required' }, { status: 400 });
+    }
+
+    // 2. Verify Turnstile token
+    if (!turnstileToken || typeof turnstileToken !== 'string') {
+      return NextResponse.json({ error: 'Verification required' }, { status: 400 });
+    }
+
+    const remoteip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || undefined;
+    const isValidToken = await verifyTurnstileToken(turnstileToken, remoteip);
+
+    if (!isValidToken) {
+      return NextResponse.json({ error: 'Verification failed. Please try again.' }, { status: 400 });
     }
 
     // 2. Load env vars

@@ -1,8 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Mail } from "lucide-react";
+'use client';
 
-function SocialIcons({ className = "" }: { className?: string }) {
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import EmailSubscriptionModal from './email-subscription-modal';
+
+function SocialIcons({ className = '' }: { className?: string }) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       {/* YouTube */}
@@ -42,23 +45,58 @@ function SocialIcons({ className = "" }: { className?: string }) {
 }
 
 export default function Header() {
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+
+  // Lock body scroll while modal is open
+  useEffect(() => {
+    if (!isEmailModalOpen) return;
+
+    const prevOverflow = document.body.style.overflow;
+    const prevPaddingRight = document.body.style.paddingRight;
+
+    document.body.style.overflow = 'hidden';
+
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.body.style.paddingRight = prevPaddingRight;
+    };
+  }, [isEmailModalOpen]);
+
   return (
     <header className="mb-8">
-      {/* Top utility bar (styled like your other panels) */}
+      {/* Top utility bar */}
       <div className="mb-6 border border-[rgba(30,27,22,0.08)] rounded-lg px-4 py-3">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
           {/* Left: Email Updates */}
-          {/* <Link
-            href="#email-updates"
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted-ink hover:text-ink transition-colors"
-            aria-label="Jump to email updates signup"
+          <button
+            onClick={() => setIsEmailModalOpen(true)}
+            type="button"
+            aria-label="Subscribe to email updates"
+            className="inline-flex items-center gap-2 cursor-pointer"
           >
-            <Mail size={16} className="opacity-80" />
-            <span>Emails</span>
-          </Link> */}
+            {/* Text: styled like “Follow:” */}
+            <span className="text-sm text-muted-ink whitespace-nowrap">
+              Email updates:
+            </span>
 
-          {/* Right: Follow along + icons */}
-          <div className="flex items-center gap-3">
+            {/* Icon: same behavior as social icons */}
+            <span className="opacity-70 hover:opacity-100 transition-opacity">
+              <Image
+                src="/email-logo.svg"
+                width={30}
+                height={30}
+                alt="Email icon"
+              />
+            </span>
+          </button>
+
+          {/* Right: Follow + social icons */}
+          <div className="ml-auto flex items-center gap-3">
             <span className="text-sm text-muted-ink whitespace-nowrap">
               Follow:
             </span>
@@ -90,6 +128,10 @@ export default function Header() {
           <i>1 year, 0 screens, 100s of biomarkers</i>
         </p>
       </div>
+
+      {isEmailModalOpen && (
+        <EmailSubscriptionModal onClose={() => setIsEmailModalOpen(false)} />
+      )}
     </header>
   );
 }
