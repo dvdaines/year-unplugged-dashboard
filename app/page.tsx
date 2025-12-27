@@ -186,7 +186,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <HealthMetric title="Testosterone Level" value={685} unit="ng/dL" change={+12.3} baseline="610 ng/dL" />
-            <HealthMetric title="Working Memory" value={97} unit="Percentile" change={94} baseline="50" />
+            <HealthMetric title="Working Memory" value={77} unit="Percentile" change={+54} baseline="50" />
             <HealthMetric title="Sleep Quality" value={87} unit="Score (30 Day Avg)" change={+15.2} baseline="75.5" />
             <HealthMetric title="Melatonin (Overnight)" value={62} unit="pg/mL" change={+18.1} baseline="52.5 pg/mL" />
           </div>
