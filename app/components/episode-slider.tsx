@@ -6,7 +6,7 @@ import { useState, useEffect, useMemo } from 'react';
 // Placeholder episode data - replace with real data later
 const episodes = [
   { id: 1, title: 'Baseline I', thumbnail: '/video-placeholder.png' },
-  { id: 2, title: 'Baeline II', thumbnail: '/video-placeholder.png' },
+  { id: 2, title: 'Baseline II', thumbnail: '/video-placeholder.png' },
   { id: 3, title: 'Month 1', thumbnail: '/video-placeholder.png' },
   { id: 4, title: 'Month 2', thumbnail: '/video-placeholder.png' },
   { id: 5, title: 'Month 3', thumbnail: '/video-placeholder.png' },
