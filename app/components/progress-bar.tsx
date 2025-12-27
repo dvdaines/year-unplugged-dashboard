@@ -269,7 +269,7 @@ export default function ProgressBar({ startDate }: ProgressBarProps) {
 
         <div className="flex justify-between items-center">
           <p className="text-sm text-muted-ink">
-            {daysElapsed} / {screenlessDays} days screenless ({progress.toFixed(1)}%)
+            {daysElapsed} / {screenlessDays} days ({progress.toFixed(1)}%)
           </p>
 
           <button
