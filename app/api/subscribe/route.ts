@@ -62,13 +62,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Verification failed. Please try again.' }, { status: 400 });
     }
 
-    // 2. Load env vars
-    const apiKey = process.env.KIT_API_KEY; // Renamed for clarity
+    // 3. Load env vars
+    const apiKey = process.env.KIT_API_KEY;
     const formId = process.env.KIT_FORM_ID;
 
     if (!apiKey || !formId) {
-      console.error('Kit env vars missing');
-      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+      const missing = [];
+      if (!apiKey) missing.push('KIT_API_KEY');
+      if (!formId) missing.push('KIT_FORM_ID');
+      console.error(`Kit env vars missing in deployment: ${missing.join(', ')}`);
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
     }
 
     // 3. Create subscriber (V4 uses 'email_address')
