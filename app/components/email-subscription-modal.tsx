@@ -145,7 +145,7 @@ export default function EmailSubscriptionModal({ onClose }: EmailSubscriptionMod
             <div className="p-5 sm:p-6 border-b border-[rgba(30,27,22,0.08)]">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="font-display text-2xl">Email Updates</h3>
+                  <h2 className="font-display text-2xl">Email Updates</h2>
                   <p className="text-sm text-muted-ink mt-1">
                     Get notified when new updates are published
                   </p>

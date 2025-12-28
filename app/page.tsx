@@ -148,7 +148,7 @@ export default function Home() {
             {/* Live Updates */}
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <h3 className="font-display text-xl">Live Updates</h3>
+                <h2 className="font-display text-xl">Live Updates</h2>
                 <p className="text-sm text-ink">
                   Posted by{' '}
                   <a
