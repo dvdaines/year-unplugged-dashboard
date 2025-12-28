@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import EmailProtection from '../components/email-protection';
 
 export default function DisclaimerPage() {
   return (
@@ -53,7 +54,7 @@ export default function DisclaimerPage() {
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">Contact</h2>
             <p>
-              Questions about this disclaimer: <a href="mailto:contact@yearunplugged.com" className="underline underline-offset-4 hover:opacity-80">contact@yearunplugged.com</a>
+              Questions about this disclaimer: <EmailProtection />
             </p>
           </div>
         </section>

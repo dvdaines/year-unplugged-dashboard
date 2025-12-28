@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import EmailProtection from '../components/email-protection';
 
 export default function TermsPage() {
   return (
@@ -53,7 +54,7 @@ export default function TermsPage() {
               <li>use the Content in a misleading way (including altering context in a way that implies medical endorsement)</li>
             </ul>
             <p className="mt-4">
-              If you want to reuse Content (media clips, charts, datasets, etc.), contact: <a href="mailto:contact@yearunplugged.com" className="underline underline-offset-4 hover:opacity-80">contact@yearunplugged.com</a>.
+              If you want to reuse Content (media clips, charts, datasets, etc.), contact: <EmailProtection />.
             </p>
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">4) No affiliation</h2>
@@ -98,7 +99,7 @@ export default function TermsPage() {
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">12) Contact</h2>
             <p>
-              Questions about these Terms: <a href="mailto:contact@yearunplugged.com" className="underline underline-offset-4 hover:opacity-80">contact@yearunplugged.com</a>
+              Questions about these Terms: <EmailProtection />
             </p>
           </div>
         </section>

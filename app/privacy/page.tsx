@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import EmailProtection from '../components/email-protection';
 
 export default function PrivacyPage() {
   return (
@@ -22,7 +23,7 @@ export default function PrivacyPage() {
             </p>
 
             <p>
-              If you have questions, contact: <a href="mailto:contact@yearunplugged.com" className="underline underline-offset-4 hover:opacity-80">contact@yearunplugged.com</a>
+              If you have questions, contact: <EmailProtection />
             </p>
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">Summary (plain English)</h2>
@@ -128,7 +129,7 @@ export default function PrivacyPage() {
               <li>request deletion of your subscription information (where applicable)</li>
             </ul>
             <p className="mt-4">
-              To make a request, contact: <a href="mailto:contact@yearunplugged.com" className="underline underline-offset-4 hover:opacity-80">contact@yearunplugged.com</a>
+              To make a request, contact: <EmailProtection />
             </p>
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">Children&apos;s privacy</h2>
