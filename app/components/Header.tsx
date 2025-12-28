@@ -81,7 +81,7 @@ export default function Header() {
           >
             {/* Text: styled like “Follow:” */}
             <span className="text-sm text-muted-ink whitespace-nowrap">
-              Email updates:
+              Updates:
             </span>
 
             {/* Icon: same behavior as social icons */}
