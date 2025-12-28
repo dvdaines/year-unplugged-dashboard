@@ -11,6 +11,7 @@ async function kitFetch(input: string, init?: RequestInit) {
 }
 
 // Verify Turnstile token
+// Note: Cloudflare automatically invalidates tokens after verification, so they're single-use by default
 async function verifyTurnstileToken(token: string, remoteip?: string): Promise<boolean> {
   const secretKey = process.env.TURNSTILE_SECRET_KEY;
   
@@ -33,7 +34,18 @@ async function verifyTurnstileToken(token: string, remoteip?: string): Promise<b
     });
 
     const result = await response.json();
-    return result.success === true;
+    
+    // Check for success - Cloudflare handles token invalidation automatically
+    if (result.success === true) {
+      return true;
+    }
+    
+    // Log error codes for debugging
+    if (result['error-codes'] && result['error-codes'].length > 0) {
+      console.warn('Turnstile verification errors:', result['error-codes']);
+    }
+    
+    return false;
   } catch (error) {
     console.error('Turnstile verification error:', error);
     return false;
