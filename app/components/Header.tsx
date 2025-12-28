@@ -8,17 +8,6 @@ import EmailSubscriptionModal from './email-subscription-modal';
 function SocialIcons({ className = '' }: { className?: string }) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      {/* YouTube */}
-      <Link
-        href="https://www.youtube.com/@daviddorg"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="opacity-70 hover:opacity-100 transition-opacity"
-        aria-label="YouTube"
-      >
-        <Image src="/youtube-logo.svg" width={28} height={28} alt="YouTube logo" />
-      </Link>
-
       {/* X */}
       <Link
         href="https://x.com/daviddorg"
@@ -39,6 +28,17 @@ function SocialIcons({ className = '' }: { className?: string }) {
         aria-label="TikTok"
       >
         <Image src="/tiktok-logo.svg" width={26} height={26} alt="TikTok logo" />
+      </Link>
+
+      {/* YouTube */}
+      <Link
+        href="https://www.youtube.com/@daviddorg"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+        aria-label="YouTube"
+      >
+        <Image src="/youtube-logo.svg" width={28} height={28} alt="YouTube logo" />
       </Link>
     </div>
   );
