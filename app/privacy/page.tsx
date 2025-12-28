@@ -26,7 +26,7 @@ export default function PrivacyPage() {
               If you have questions, contact: <EmailProtection />
             </p>
 
-            <h2 className="font-display text-xl text-ink mt-8 mb-4">Summary (plain English)</h2>
+            <h2 className="font-display text-xl text-ink mt-8 mb-4">Summary</h2>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>If you subscribe, I collect your email address (via Kit, formerly ConvertKit).</li>
               <li>I use Vercel Analytics to understand basic site usage. I may add Google Analytics in the future.</li>
