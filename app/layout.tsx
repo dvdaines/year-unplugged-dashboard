@@ -21,7 +21,7 @@ const THUMBNAIL = "/thumbnail.png";
 export const metadata: Metadata = {
   metadataBase: new URL("https://yearunplugged.com"),
   title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
-  description: "1 year, 0 screens, 100s of biomarkers",
+  description: "A one-year, zero-screen self-experiment with extensive biomarker tracking—publicly documented by David Daines.",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://yearunplugged.com",
     title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
-    description: "1 year, 0 screens, 100s of biomarkers",
+    description: "A one-year, zero-screen self-experiment with extensive biomarker tracking—publicly documented by David Daines.",
     images: [{ url: THUMBNAIL, width: 1200, height: 630, alt: "Year Unplugged" }],
   },
   twitter: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     site: "@daviddorg",
     creator: "@daviddorg",
     title: "Year Unplugged: 1 year, 0 screens, 100s of biomarkers",
-    description: "1 year, 0 screens, 100s of biomarkers",
+    description: "A one-year, zero-screen self-experiment with extensive biomarker tracking—publicly documented by David Daines.",
     images: [THUMBNAIL],
   },
   other: {

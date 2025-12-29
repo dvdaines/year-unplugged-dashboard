@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import EmailProtection from '../components/email-protection';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Year Unplugged',
+  description: 'Privacy Policy for Year Unplugged. Learn how we collect, use, and protect your information when you visit yearunplugged.com.',
+};
 
 export default function PrivacyPage() {
   return (

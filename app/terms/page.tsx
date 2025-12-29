@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import EmailProtection from '../components/email-protection';
+
+export const metadata: Metadata = {
+  title: 'Terms of Use | Year Unplugged',
+  description: 'Terms of Use for Year Unplugged. These terms govern your access to and use of yearunplugged.com.',
+};
 
 export default function TermsPage() {
   return (

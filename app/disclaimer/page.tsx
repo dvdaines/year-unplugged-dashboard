@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import EmailProtection from '../components/email-protection';
+
+export const metadata: Metadata = {
+  title: 'Disclaimer | Year Unplugged',
+  description: 'Disclaimer for Year Unplugged: This site provides information for educational purposes only and is not medical advice. This is an N-of-1 experiment and results may not apply to others.',
+};
 
 export default function DisclaimerPage() {
   return (
