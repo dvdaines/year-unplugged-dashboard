@@ -7,6 +7,10 @@ export default function Footer() {
     <footer className="mt-16 pt-8 border-t border-[rgba(30,27,22,0.08)]">
       <div className="flex flex-col items-center gap-4 text-center">
         <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-ink">
+          <Link href="/og" className="hover:text-ink transition-colors">
+            OG Followers
+          </Link>
+          <span>•</span>
           <Link href="/disclaimer" className="hover:text-ink transition-colors">
             Disclaimer
           </Link>
