@@ -20,7 +20,7 @@ export default function Home() {
   const [showReadMore, setShowReadMore] = useState(false);
 
   // PO Box copy state
-  const PO_BOX_ADDRESS = 'P.O. Box 12345, San Francisco, CA 94122';
+  const PO_BOX_ADDRESS = 'P.O. Box Coming Soon';
   const [copied, setCopied] = useState(false);
 
   const copyAddress = async () => {
