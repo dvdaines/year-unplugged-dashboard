@@ -48,7 +48,7 @@ export default function OGPage() {
             <div>
               <h2 className="font-display text-2xl mb-4">TikTok</h2>
               <p className="text-muted-ink text-base sm:text-lg leading-relaxed mb-4">
-                This is for the first 10,000 people who followed me on TikTok. I appreciate you for helping get the message out.
+                This is for the first 10,000 people who followed me on TikTok. Thank you for helping me get this started.
               </p>
               <p className="text-muted-ink text-sm leading-relaxed mb-8">
                 Updated daily. The colored dots are given to OGs who comment.
