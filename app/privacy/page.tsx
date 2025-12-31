@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
           <div className="text-muted-ink text-base sm:text-lg leading-relaxed space-y-6">
             <p className="text-sm text-muted-ink mb-6">
-              Effective date: December 27, 2025
+              Effective date: December 30, 2025
             </p>
 
             <p>
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl text-ink mt-8 mb-4">Summary</h2>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>If you subscribe, I collect your email address (via Kit, formerly ConvertKit).</li>
-              <li>I use Vercel Analytics to understand basic site usage. I may add Google Analytics in the future.</li>
+              <li>I use Vercel Analytics and Google Analytics to understand site usage and improve the Site.</li>
               <li>I do not sell your personal information.</li>
               <li>Third-party embeds (like video/social) can collect data independently.</li>
             </ul>
@@ -61,11 +61,11 @@ export default function PrivacyPage() {
               <strong>Analytics providers:</strong>
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Vercel Analytics (currently)</li>
-              <li>Google Analytics (may be used in the future)</li>
+              <li>Vercel Analytics</li>
+              <li>Google Analytics</li>
             </ul>
             <p className="mt-4">
-              Depending on configuration, analytics tools may use cookies or similar technologies. Some are capable of operating in a more &quot;cookie-light&quot; mode, but you should assume standard web telemetry may occur.
+              Depending on configuration, analytics tools may use cookies or similar technologies. Some setups are &quot;cookie-light,&quot; but you should assume standard web telemetry may occur.
             </p>
 
             <h3 className="font-display text-lg text-ink mt-6 mb-3">3) Information from embedded third parties</h3>
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl text-ink mt-8 mb-4">How I share information</h2>
             <p>I share information only in limited ways:</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Service providers:</strong> I use providers like Kit (email) and Vercel (hosting/analytics) who process information on my behalf.</li>
+              <li><strong>Service providers:</strong> I use providers like Kit (email), Vercel (hosting/analytics), and Google Analytics (analytics) who process information on my behalf.</li>
               <li><strong>Legal/safety:</strong> I may disclose information if required by law, subpoena, or to protect rights, safety, and security.</li>
               <li><strong>Business changes:</strong> If the Project is reorganized (e.g., I form a legal entity) or the Site is transferred, information may be transferred as part of that change.</li>
             </ul>
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
               <li>support embedded third-party media</li>
             </ul>
             <p className="mt-4">
-              You can control cookies through your browser settings. If Google Analytics is enabled in the future, additional cookie-based tracking may occur depending on configuration.
+              You can control cookies through your browser settings.
             </p>
 
             <h2 className="font-display text-xl text-ink mt-8 mb-4">Data retention</h2>
