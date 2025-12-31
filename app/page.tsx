@@ -7,7 +7,6 @@ import ProgressBar from './components/progress-bar';
 import HealthMetric from './components/health-metric';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Link from 'next/link';
 import { Copy, Check } from 'lucide-react';
 import LiteYouTube from './components/lite-youtube';
 
@@ -18,6 +17,7 @@ export default function Home() {
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showReadMore, setShowReadMore] = useState(false);
+  const [showComingSoonModal, setShowComingSoonModal] = useState(false);
 
   // PO Box copy state
   const PO_BOX_ADDRESS = 'P.O. Box Coming Soon';
@@ -192,12 +192,12 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center">
-            <Link
-              href="#"
-              className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm"
+            <button
+              onClick={() => setShowComingSoonModal(true)}
+              className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer"
             >
               See All 100+ Biomarkers
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -209,6 +209,49 @@ export default function Home() {
 
         <Footer />
       </div>
+
+      {/* Coming Soon Modal */}
+      {showComingSoonModal && (
+        <div className="fixed inset-0 z-50" onClick={() => setShowComingSoonModal(false)}>
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-[rgba(237,230,218,0.72)] backdrop-blur-[2px]" />
+
+          {/* Centering wrapper */}
+          <div className="relative flex min-h-dvh items-center justify-center p-4 sm:p-6">
+            {/* Panel */}
+            <div
+              className="w-full max-w-md bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg shadow-sm overflow-hidden flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="p-5 sm:p-6 border-b border-[rgba(30,27,22,0.08)]">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h2 className="font-display text-2xl">Coming Soon</h2>
+                    <p className="text-sm text-muted-ink mt-1">
+                      The full biomarker dashboard is in development
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => setShowComingSoonModal(false)}
+                    className="btn inline-flex items-center justify-center bg-panel border border-[rgba(30,27,22,0.08)] hover:bg-[rgba(237,230,218,0.8)] transition-colors shadow-sm cursor-pointer text-sm px-3 py-1.5 rounded-lg"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-5 sm:p-6">
+                <p className="text-base text-ink">
+                  We're working on building out the complete biomarker dashboard with all 100+ metrics. Check back soon!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
