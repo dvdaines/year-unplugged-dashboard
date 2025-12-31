@@ -65,7 +65,7 @@ export default function OGPage() {
 
   return (
     <main className="min-h-dvh bg-cream text-ink antialiased">
-      <div className="max-w-7xl mx-auto px-6 py-6">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <Header />
 
         <section className="max-w-4xl mx-auto py-16">
