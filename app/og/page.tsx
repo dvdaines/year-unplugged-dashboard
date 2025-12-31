@@ -51,7 +51,7 @@ export default function OGPage() {
                 This is for the first 10,000 people who followed me on TikTok. I appreciate you for helping get the message out.
               </p>
               <p className="text-muted-ink text-sm leading-relaxed mb-8">
-                The colored dots are given to OGs who comment.
+                Updated daily. The colored dots are given to OGs who comment.
               </p>
             </div>
           </div>
