@@ -11,8 +11,8 @@ const gemColorMap: Record<string, string> = {
   YELLOW: '#eab308',
   GREEN: '#22c55e',
   BLUE: '#3b82f6',
-  INDIGO: '#6366f1',
-  VIOLET: '#8b5cf6',
+  PURPLE: '#a855f7',
+  PINK: '#ec4899',
 };
 
 function getGemColorDot(color: string) {
@@ -21,10 +21,39 @@ function getGemColorDot(color: string) {
   
   return (
     <span
-      className="inline-block w-2 h-2 rounded-full ml-2"
-      style={{ backgroundColor: hexColor }}
+      className="inline-block ml-2 relative"
+      style={{ 
+        width: '8px',
+        height: '8px',
+      }}
       aria-label={`Gem color: ${color || 'none'}`}
-    />
+    >
+      {/* Diamond gem shape */}
+      <span
+        className="absolute inset-0"
+        style={{
+          width: '8px',
+          height: '8px',
+          backgroundColor: hexColor,
+          transform: 'rotate(45deg)',
+          borderRadius: '1px',
+          boxShadow: '0 0 2px rgba(0,0,0,0.3), inset 0 0 2px rgba(255,255,255,0.3)',
+        }}
+      />
+      {/* Highlight shine */}
+      <span
+        className="absolute"
+        style={{
+          top: '2px',
+          left: '2px',
+          width: '3px',
+          height: '3px',
+          backgroundColor: 'rgba(255, 255, 255, 0.5)',
+          borderRadius: '50%',
+          transform: 'rotate(-45deg)',
+        }}
+      />
+    </span>
   );
 }
 
@@ -51,7 +80,7 @@ export default function OGPage() {
                 This is for the first 10,000 people who followed me on TikTok. Thank you for helping me get this started.
               </p>
               <p className="text-muted-ink text-sm leading-relaxed mb-8">
-                Updated daily. The colored dots are given to OGs who comment.
+                Updated daily. The gems are given to OGs who commented.
               </p>
             </div>
           </div>
@@ -67,7 +96,8 @@ export default function OGPage() {
               })
               .map((follower, index) => {
                 const username = follower.username;
-                const profileUrl = follower.profile_url || `https://www.tiktok.com/@${username}`;
+                const userId = follower.user_id || '';
+                const profileUrl = `https://www.tiktok.com/share/user/${userId}`;
                 const gemColor = follower['Gem Color'] || '';
                 const order = follower.order || '';
 
