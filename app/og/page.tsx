@@ -77,7 +77,7 @@ export default function OGPage() {
             <div>
               <h2 className="font-display text-2xl mb-4">TikTok</h2>
               <p className="text-muted-ink text-base sm:text-lg leading-relaxed mb-4">
-                This is for the first 10,000 people who followed me on TikTok. Thank you for helping me grow so fast.
+                This is for the first 10,000 legends who followed me on TikTok. Thank you for helping get this project going!
               </p>
               <p className="text-muted-ink text-sm leading-relaxed mb-8">
                 Updated daily. The gems are given to OGs who commented.
