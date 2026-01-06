@@ -153,7 +153,7 @@ export default function Home() {
                   Posted by{' '}
                   <a
                     className="italic underline"
-                    href="https://x.com/daviddorg/status/2003251001411948770"
+                    href="https://www.tiktok.com/@daviddorg/video/7591726724975562015"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
