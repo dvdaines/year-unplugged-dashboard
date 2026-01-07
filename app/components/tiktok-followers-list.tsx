@@ -87,7 +87,7 @@ export default function TikTokFollowersList({ followers }: TikTokFollowersListPr
     <div>
       <h2 className="font-display text-2xl mb-4">TikTok</h2>
       <p className="text-muted-ink text-base sm:text-lg leading-relaxed mb-4">
-        This is for the first 10,000 legends who followed me on TikTok. Thank you for helping get this project going!
+        This is for the first 11,000 legends who followed me on TikTok. Thank you for helping get this project going!
       </p>
       <p className="text-muted-ink text-sm leading-relaxed mb-6">
       Updated daily. Last updated: January 5, 2026 2pm EST. The gems are given to OGs who commented. If your gem color is incorrect, feel free to comment on my latest video, and I'll update it.
