@@ -87,10 +87,10 @@ export default function TikTokFollowersList({ followers }: TikTokFollowersListPr
     <div>
       <h2 className="font-display text-2xl mb-4">TikTok</h2>
       <p className="text-muted-ink text-base sm:text-lg leading-relaxed mb-4">
-        This is for the first 11,000 legends who followed me on TikTok. Thank you for helping get this project going!
+        I appreciate everyone who supports this project, but this page goes out to the first 11,000! Thank you for helping me get started!
       </p>
       <p className="text-muted-ink text-sm leading-relaxed mb-6">
-      Last updated: January 7, 2026 11pm EST. The gems are given to OGs who commented.
+      Last updated: January 7, 2026 11pm EST. The gems are given to OGs who commented before the cutoff.
       </p>
 
       {/* Search Field */}
