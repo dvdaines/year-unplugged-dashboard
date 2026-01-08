@@ -90,7 +90,7 @@ export default function TikTokFollowersList({ followers }: TikTokFollowersListPr
         This is for the first 11,000 legends who followed me on TikTok. Thank you for helping get this project going!
       </p>
       <p className="text-muted-ink text-sm leading-relaxed mb-6">
-      Updated daily. Last updated: January 5, 2026 2pm EST. The gems are given to OGs who commented. If your gem color is incorrect, feel free to comment on my latest video, and I'll update it.
+      Last updated: January 7, 2026 11pm EST. The gems are given to OGs who commented.
       </p>
 
       {/* Search Field */}

@@ -22,13 +22,6 @@ export default function OGPage() {
             OG Followers
           </h1>
 
-          {/* Urgent Note */}
-          <div className="bg-panel border border-[rgba(30,27,22,0.08)] rounded-lg p-5 mb-8">
-            <p className="text-base text-ink leading-relaxed">
-              <strong>URGENT:</strong> Due to an increase of 9,000+ followers overnight, I am updating this as fast as I can. I'm doing my best to get through the thousands of comments. The OG list was also increased to the first 11k (FINAL). Thanks for following!
-            </p>
-          </div>
-
           <div className="space-y-6 mb-12">
             <TikTokFollowersList followers={followers} />
           </div>
