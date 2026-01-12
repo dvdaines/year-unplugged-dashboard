@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useDeferredValue } from 'react';
 
 const gemColorMap: Record<string, string> = {
   RED: '#ef4444',
@@ -60,18 +60,35 @@ interface TikTokFollowersListProps {
 
 export default function TikTokFollowersList({ followers }: TikTokFollowersListProps) {
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Use deferred value to reduce lag during typing
+  const deferredSearchQuery = useDeferredValue(searchQuery);
+
+  // Pre-normalize usernames once for faster searching
+  const normalizedFollowers = useMemo(() => {
+    return followers.map(follower => ({
+      ...follower,
+      normalizedUsername: (follower.username || '').toLowerCase(),
+    })) as Array<Record<string, string> & { normalizedUsername: string }>;
+  }, [followers]);
 
   const filteredFollowers = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return followers;
+    if (!deferredSearchQuery.trim()) {
+      return normalizedFollowers;
     }
 
-    const query = searchQuery.toLowerCase().trim();
-    return followers.filter(follower => {
-      const username = (follower.username || '').toLowerCase();
-      return username.includes(query);
+    // Normalize query: trim whitespace, remove optional leading @ symbol
+    const query = deferredSearchQuery.toLowerCase().trim().replace(/^@+/, '');
+    
+    // Early return if query is empty after normalization
+    if (!query) {
+      return normalizedFollowers;
+    }
+    
+    return normalizedFollowers.filter(follower => {
+      return follower.normalizedUsername.includes(query);
     });
-  }, [followers, searchQuery]);
+  }, [normalizedFollowers, deferredSearchQuery]);
 
   const sortedFollowers = useMemo(() => {
     return filteredFollowers
@@ -90,7 +107,7 @@ export default function TikTokFollowersList({ followers }: TikTokFollowersListPr
         I appreciate everyone who supports this project, but this page goes out to the first 11,000! Thank you for helping me get started!
       </p>
       <p className="text-muted-ink text-sm leading-relaxed mb-6">
-      Last updated: January 11, 2026 1:50pm ET. The gems are given to OGs who commented before the cutoff. Note: I had to stop monitoring comments on older videos as there were thousands.
+      Last updated: January 11, 2026 11:49pm ET. The gems are given to OGs who commented before the cutoff. Note: I had to stop monitoring comments on older videos as there were thousands.
       </p>
 
       {/* Search Field */}
