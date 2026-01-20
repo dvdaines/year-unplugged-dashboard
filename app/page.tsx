@@ -12,7 +12,7 @@ import LiteYouTube from './components/lite-youtube';
 
 export default function Home() {
   // Start date: Dec 23, 2025
-  const startDate = new Date('2025-12-23');
+  const startDate = new Date('2025-12-30');
   const totalDays = 365;
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
