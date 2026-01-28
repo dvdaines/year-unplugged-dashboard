@@ -107,7 +107,7 @@ export default function TikTokFollowersList({ followers }: TikTokFollowersListPr
         I appreciate everyone who supports this project, but this page goes out to the first 11,000! Thank you for helping me get started!
       </p>
       <p className="text-muted-ink text-sm leading-relaxed mb-6">
-      Last updated: January 26, 2026 5:45pm ET. The gems are given to OGs who commented before the cutoff.
+      Last updated: January 28, 2026 11:59am ET. The gems are given to OGs who commented before the cutoff.
       </p>
 
       {/* Search Field */}
